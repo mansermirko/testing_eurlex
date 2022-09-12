@@ -7,4 +7,4 @@
                  xlnet-base-uncased: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
     nlpaueb/legal-bert-base-uncased: MICRO-F1: 71.5	 ± nan	MACRO-F1: 37.3	 ± nan	 | MICRO-F1: 64.9	MACRO-F1: 34.5	 
    nlpaueb/legal-bert-small-uncased: MICRO-F1: 66.8	 ± nan	MACRO-F1: 27.3	 ± nan	 | MICRO-F1: 59.3	MACRO-F1: 25.6	
-            zlucia/custom-legalbert: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
+            zlucia/custom-legalbert: MICRO-F1: 70.9	 ± nan	MACRO-F1: 36.7	 ± nan	 | MICRO-F1: 64.2	MACRO-F1: 34.3	
