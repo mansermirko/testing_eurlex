@@ -5,6 +5,6 @@
                      albert-base-v2: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
              microsoft/deberta-base: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
                  xlnet-base-uncased: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
-    nlpaueb/legal-bert-base-uncased: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	 
+    nlpaueb/legal-bert-base-uncased: MICRO-F1: 71.5	 ± nan	MACRO-F1: 37.3	 ± nan	 | MICRO-F1: 64.9	MACRO-F1: 34.5	 
    nlpaueb/legal-bert-small-uncased: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
             zlucia/custom-legalbert: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
