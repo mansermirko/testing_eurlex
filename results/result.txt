@@ -1,0 +1,10 @@
+                                     VALIDATION                                      | TEST
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                  bert-base-uncased: MICRO-F1: 69.2	 ± 0.0	MACRO-F1: 32.1	 ± 0.0	 | MICRO-F1: 62.1	MACRO-F1: 29.8	
+               roberta-base-uncased: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
+                     albert-base-v2: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
+             microsoft/deberta-base: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
+                 xlnet-base-uncased: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
+    nlpaueb/legal-bert-base-uncased: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	 
+   nlpaueb/legal-bert-small-uncased: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
+            zlucia/custom-legalbert: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
