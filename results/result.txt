@@ -4,7 +4,7 @@
                roberta-base-uncased: MICRO-F1: 70.2	 ± nan	MACRO-F1: 35.4	 ± nan	 | MICRO-F1: 63.5	MACRO-F1: 32.9	
                      albert-base-v2: MICRO-F1: 68.7	 ± nan	MACRO-F1: 32.3	 ± nan	 | MICRO-F1: 61.2	MACRO-F1: 29.9	
              microsoft/deberta-base: MICRO-F1: 73.0	 ± nan	MACRO-F1: 43.4	 ± nan	 | MICRO-F1: 66.7	MACRO-F1: 39.9
-                 xlnet-base-uncased: MICRO-F1: nan	 ± nan	MACRO-F1: nan	 ± nan	 | MICRO-F1: nan	MACRO-F1: nan	
+                 xlnet-base-uncased: MICRO-F1: 71.5	 ± nan	MACRO-F1: 39.3	 	 | MICRO-F1: 65.1	MACRO-F1: 36.3	
     nlpaueb/legal-bert-base-uncased: MICRO-F1: 71.5	 ± nan	MACRO-F1: 37.3	 ± nan	 | MICRO-F1: 64.9	MACRO-F1: 34.5	 
    nlpaueb/legal-bert-small-uncased: MICRO-F1: 66.8	 ± nan	MACRO-F1: 27.3	 ± nan	 | MICRO-F1: 59.3	MACRO-F1: 25.6	
             zlucia/custom-legalbert: MICRO-F1: 70.9	 ± nan	MACRO-F1: 36.7	 ± nan	 | MICRO-F1: 64.2	MACRO-F1: 34.3	
