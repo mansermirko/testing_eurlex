@@ -1,0 +1,1265 @@
+WARNING:__main__:Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+INFO:__main__:Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=True,
+do_train=True,
+eval_accumulation_steps=4,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=epoch,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=4,
+gradient_checkpointing=False,
+greater_is_better=True,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+load_best_model_at_end=True,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/runs/Sep12_18-58-53_dbd3ac5e8ba7,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=steps,
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=micro-f1,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=2.0,
+optim=adamw_hf,
+output_dir=logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=2,
+per_device_train_batch_size=2,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+resume_from_checkpoint=None,
+run_name=logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=epoch,
+save_total_limit=5,
+seed=1,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+INFO:datasets.info:Loading Dataset Infos from /root/.cache/huggingface/modules/datasets_modules/datasets/lex_glue/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043
+INFO:datasets.builder:Overwrite dataset info from restored data version.
+INFO:datasets.info:Loading Dataset info from /root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043
+WARNING:datasets.builder:Reusing dataset lex_glue (/root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043)
+INFO:datasets.info:Loading Dataset info from /root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043
+INFO:datasets.info:Loading Dataset Infos from /root/.cache/huggingface/modules/datasets_modules/datasets/lex_glue/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043
+INFO:datasets.builder:Overwrite dataset info from restored data version.
+INFO:datasets.info:Loading Dataset info from /root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043
+WARNING:datasets.builder:Reusing dataset lex_glue (/root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043)
+INFO:datasets.info:Loading Dataset info from /root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043
+INFO:datasets.info:Loading Dataset Infos from /root/.cache/huggingface/modules/datasets_modules/datasets/lex_glue/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043
+INFO:datasets.builder:Overwrite dataset info from restored data version.
+INFO:datasets.info:Loading Dataset info from /root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043
+WARNING:datasets.builder:Reusing dataset lex_glue (/root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043)
+INFO:datasets.info:Loading Dataset info from /root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043
+[INFO|configuration_utils.py:681] 2022-09-12 18:58:54,910 >> loading configuration file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/849d5c356987d243daffcd15f882bfcd3f3c9d8499b56652b4a52b5210fb4dc6.3ba6fec17b62dbc7f6536f86f2625bdb6e7cbee36edce364d6d0be34f27f72a0
+[INFO|configuration_utils.py:730] 2022-09-12 18:58:54,913 >> Model config BertConfig {
+  "_name_or_path": "nlpaueb/legal-bert-small-uncased",
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_ids": 0,
+  "finetuning_task": "eurlex",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3",
+    "4": "LABEL_4",
+    "5": "LABEL_5",
+    "6": "LABEL_6",
+    "7": "LABEL_7",
+    "8": "LABEL_8",
+    "9": "LABEL_9",
+    "10": "LABEL_10",
+    "11": "LABEL_11",
+    "12": "LABEL_12",
+    "13": "LABEL_13",
+    "14": "LABEL_14",
+    "15": "LABEL_15",
+    "16": "LABEL_16",
+    "17": "LABEL_17",
+    "18": "LABEL_18",
+    "19": "LABEL_19",
+    "20": "LABEL_20",
+    "21": "LABEL_21",
+    "22": "LABEL_22",
+    "23": "LABEL_23",
+    "24": "LABEL_24",
+    "25": "LABEL_25",
+    "26": "LABEL_26",
+    "27": "LABEL_27",
+    "28": "LABEL_28",
+    "29": "LABEL_29",
+    "30": "LABEL_30",
+    "31": "LABEL_31",
+    "32": "LABEL_32",
+    "33": "LABEL_33",
+    "34": "LABEL_34",
+    "35": "LABEL_35",
+    "36": "LABEL_36",
+    "37": "LABEL_37",
+    "38": "LABEL_38",
+    "39": "LABEL_39",
+    "40": "LABEL_40",
+    "41": "LABEL_41",
+    "42": "LABEL_42",
+    "43": "LABEL_43",
+    "44": "LABEL_44",
+    "45": "LABEL_45",
+    "46": "LABEL_46",
+    "47": "LABEL_47",
+    "48": "LABEL_48",
+    "49": "LABEL_49",
+    "50": "LABEL_50",
+    "51": "LABEL_51",
+    "52": "LABEL_52",
+    "53": "LABEL_53",
+    "54": "LABEL_54",
+    "55": "LABEL_55",
+    "56": "LABEL_56",
+    "57": "LABEL_57",
+    "58": "LABEL_58",
+    "59": "LABEL_59",
+    "60": "LABEL_60",
+    "61": "LABEL_61",
+    "62": "LABEL_62",
+    "63": "LABEL_63",
+    "64": "LABEL_64",
+    "65": "LABEL_65",
+    "66": "LABEL_66",
+    "67": "LABEL_67",
+    "68": "LABEL_68",
+    "69": "LABEL_69",
+    "70": "LABEL_70",
+    "71": "LABEL_71",
+    "72": "LABEL_72",
+    "73": "LABEL_73",
+    "74": "LABEL_74",
+    "75": "LABEL_75",
+    "76": "LABEL_76",
+    "77": "LABEL_77",
+    "78": "LABEL_78",
+    "79": "LABEL_79",
+    "80": "LABEL_80",
+    "81": "LABEL_81",
+    "82": "LABEL_82",
+    "83": "LABEL_83",
+    "84": "LABEL_84",
+    "85": "LABEL_85",
+    "86": "LABEL_86",
+    "87": "LABEL_87",
+    "88": "LABEL_88",
+    "89": "LABEL_89",
+    "90": "LABEL_90",
+    "91": "LABEL_91",
+    "92": "LABEL_92",
+    "93": "LABEL_93",
+    "94": "LABEL_94",
+    "95": "LABEL_95",
+    "96": "LABEL_96",
+    "97": "LABEL_97",
+    "98": "LABEL_98",
+    "99": "LABEL_99"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_10": 10,
+    "LABEL_11": 11,
+    "LABEL_12": 12,
+    "LABEL_13": 13,
+    "LABEL_14": 14,
+    "LABEL_15": 15,
+    "LABEL_16": 16,
+    "LABEL_17": 17,
+    "LABEL_18": 18,
+    "LABEL_19": 19,
+    "LABEL_2": 2,
+    "LABEL_20": 20,
+    "LABEL_21": 21,
+    "LABEL_22": 22,
+    "LABEL_23": 23,
+    "LABEL_24": 24,
+    "LABEL_25": 25,
+    "LABEL_26": 26,
+    "LABEL_27": 27,
+    "LABEL_28": 28,
+    "LABEL_29": 29,
+    "LABEL_3": 3,
+    "LABEL_30": 30,
+    "LABEL_31": 31,
+    "LABEL_32": 32,
+    "LABEL_33": 33,
+    "LABEL_34": 34,
+    "LABEL_35": 35,
+    "LABEL_36": 36,
+    "LABEL_37": 37,
+    "LABEL_38": 38,
+    "LABEL_39": 39,
+    "LABEL_4": 4,
+    "LABEL_40": 40,
+    "LABEL_41": 41,
+    "LABEL_42": 42,
+    "LABEL_43": 43,
+    "LABEL_44": 44,
+    "LABEL_45": 45,
+    "LABEL_46": 46,
+    "LABEL_47": 47,
+    "LABEL_48": 48,
+    "LABEL_49": 49,
+    "LABEL_5": 5,
+    "LABEL_50": 50,
+    "LABEL_51": 51,
+    "LABEL_52": 52,
+    "LABEL_53": 53,
+    "LABEL_54": 54,
+    "LABEL_55": 55,
+    "LABEL_56": 56,
+    "LABEL_57": 57,
+    "LABEL_58": 58,
+    "LABEL_59": 59,
+    "LABEL_6": 6,
+    "LABEL_60": 60,
+    "LABEL_61": 61,
+    "LABEL_62": 62,
+    "LABEL_63": 63,
+    "LABEL_64": 64,
+    "LABEL_65": 65,
+    "LABEL_66": 66,
+    "LABEL_67": 67,
+    "LABEL_68": 68,
+    "LABEL_69": 69,
+    "LABEL_7": 7,
+    "LABEL_70": 70,
+    "LABEL_71": 71,
+    "LABEL_72": 72,
+    "LABEL_73": 73,
+    "LABEL_74": 74,
+    "LABEL_75": 75,
+    "LABEL_76": 76,
+    "LABEL_77": 77,
+    "LABEL_78": 78,
+    "LABEL_79": 79,
+    "LABEL_8": 8,
+    "LABEL_80": 80,
+    "LABEL_81": 81,
+    "LABEL_82": 82,
+    "LABEL_83": 83,
+    "LABEL_84": 84,
+    "LABEL_85": 85,
+    "LABEL_86": 86,
+    "LABEL_87": 87,
+    "LABEL_88": 88,
+    "LABEL_89": 89,
+    "LABEL_9": 9,
+    "LABEL_90": 90,
+    "LABEL_91": 91,
+    "LABEL_92": 92,
+    "LABEL_93": 93,
+    "LABEL_94": 94,
+    "LABEL_95": 95,
+    "LABEL_96": 96,
+    "LABEL_97": 97,
+    "LABEL_98": 98,
+    "LABEL_99": 99
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 8,
+  "num_hidden_layers": 6,
+  "output_past": true,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.21.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|configuration_utils.py:681] 2022-09-12 18:58:55,467 >> loading configuration file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/849d5c356987d243daffcd15f882bfcd3f3c9d8499b56652b4a52b5210fb4dc6.3ba6fec17b62dbc7f6536f86f2625bdb6e7cbee36edce364d6d0be34f27f72a0
+[INFO|configuration_utils.py:730] 2022-09-12 18:58:55,468 >> Model config BertConfig {
+  "_name_or_path": "nlpaueb/legal-bert-small-uncased",
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_ids": 0,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 8,
+  "num_hidden_layers": 6,
+  "output_past": true,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.21.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|tokenization_utils_base.py:1803] 2022-09-12 18:58:57,079 >> loading file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/vocab.txt from cache at /root/.cache/huggingface/transformers/161aca8234341f57a8152a4e1e0ac976b56ae843d0ccc342baafa542c506f38f.555d2ff38b0d637d16b10966ba127f36ea0c9665a4be3c598402182a590ed693
+[INFO|tokenization_utils_base.py:1803] 2022-09-12 18:58:57,079 >> loading file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/tokenizer.json from cache at None
+[INFO|tokenization_utils_base.py:1803] 2022-09-12 18:58:57,080 >> loading file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:1803] 2022-09-12 18:58:57,080 >> loading file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:1803] 2022-09-12 18:58:57,080 >> loading file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/8604b1ec38529ff03ce0e0e112bf67872eb00ff97381614d68001aef03a1e73d.76ea01b4b85ac16e2cec55c398cba7a943d89ab21dfdd973f6630a152e4b9aed
+[INFO|configuration_utils.py:681] 2022-09-12 18:58:57,345 >> loading configuration file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/849d5c356987d243daffcd15f882bfcd3f3c9d8499b56652b4a52b5210fb4dc6.3ba6fec17b62dbc7f6536f86f2625bdb6e7cbee36edce364d6d0be34f27f72a0
+[INFO|configuration_utils.py:730] 2022-09-12 18:58:57,346 >> Model config BertConfig {
+  "_name_or_path": "nlpaueb/legal-bert-small-uncased",
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_ids": 0,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 8,
+  "num_hidden_layers": 6,
+  "output_past": true,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.21.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|configuration_utils.py:681] 2022-09-12 18:58:57,642 >> loading configuration file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/849d5c356987d243daffcd15f882bfcd3f3c9d8499b56652b4a52b5210fb4dc6.3ba6fec17b62dbc7f6536f86f2625bdb6e7cbee36edce364d6d0be34f27f72a0
+[INFO|configuration_utils.py:730] 2022-09-12 18:58:57,643 >> Model config BertConfig {
+  "_name_or_path": "nlpaueb/legal-bert-small-uncased",
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_ids": 0,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 8,
+  "num_hidden_layers": 6,
+  "output_past": true,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.21.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|modeling_utils.py:2041] 2022-09-12 18:58:57,958 >> loading weights file https://huggingface.co/nlpaueb/legal-bert-small-uncased/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/ef157178f0e2f876ebc268ef1a1bc5f909f7d41fb47e504408f486a680d59dc9.9a3397540a5c42acf1ab1800cd6550549373878330d020da4c60f4fd5977647e
+[WARNING|modeling_utils.py:2426] 2022-09-12 18:58:58,377 >> Some weights of the model checkpoint at nlpaueb/legal-bert-small-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:2438] 2022-09-12 18:58:58,377 >> Some weights of BertForSequenceClassification were not initialized from the model checkpoint at nlpaueb/legal-bert-small-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043/cache-2de255706a9ce4cb.arrow
+INFO:__main__:Sample 8805 of the training set: {'text': "COUNCIL REGULATION (EEC) No 4264/88 of 13 December 1988 on the application of Decision No 1/88 of the EEC-Cyprus Association Council amending, as a consequence of the introduction of the harmonized system, the Protocol concerning the definition of the concept of ´originating products' and methods of administrative cooperation\nTHE COUNCIL OF THE EUROPEAN COMMUNITIES, Having regard to the Treaty establishing the European Economic Community, and in particular Article 113 thereof, Having regard to the proposal from the Commission, Whereas the Agreement establishing an Association between the European Economic Community and the Republic of Cyprus (1) was signed on 19 December 1972;\nWhereas, by virtue of Article 25 of the Protocol concerning the definition of the concept of ´originating products' and methods of administrative cooperation, which forms an integral part of the above Agreement, the EEC-Cyprus Association Council has adopted Decision No 1/88 amending the said Protocol;\nWhereas it is necessary to apply this Decision in the Community, HAS ADOPTED THIS REGULATION:\nArticle 1 Decision No 1/88 of the EEC-Cyprus Association Council shall apply in the Community.\nThe text of the Decision is attached to this Regulation.\nArticle 2 This Regulation shall enter into force on the day following that of its publication in the Official Journal of the European Communities.\nIt shall apply from 1 January 1989. This Regulation shall be binding in its entirety and directly applicable in all Member States.\nDone at Brussels, 13 December 1988. For the Council The President K. PAPANAYOTOU (1) OJ No L 133, 21. 5. 1973, p. 2. DECISION No 1/88 OF THE EEC-CYPRUS ASSOCIATION COUNCIL of 21 November 1988 amending, as a consequence of the introduction of the harmonized system, Protocol 2 concerning the definition of the concept of ´originating products' and methods of administrative cooperation\nTHE ASSOCIATION COUNCIL, Having regard to the Agreement creating an Association between the European Economic Community and the Republic of Cyprus, signed on 19 December 1972, Having regard to the Protocol concerning the definition of the concept of ´originating products' and methods of administrative cooperation, and in particular Article 25 thereof, Whereas the origin rules contained in the said Protocol are based on the use of the Customs Cooperation Council Nomenclature;\nwhereas the Customs Cooperation Council approved the International Convention on the Harmonized Commodity Description and Coding System (hereinafter referred to as the ´harmonized system') on 14 June 1983;\nwhereas it is the intention that, as from 1 January 1988, the harmonized system will replace the current nomenclature for the purposes of international trade;\nwhereas it is therefore necessary to adapt the rules of origin contained in the Protocol so that they are based on the use of the harmonized system;\nWhereas, in the light of experience, the presentation of the origin rules could be improved by grouping all the exceptions to the basic change of heading rule into one List and by providing detailed guidance on how it should be interpreted, HAS DECIDED AS FOLLOWS:\nArticle 1 In the last subparagraph of Article 1 of Protocol 2, ´in List C in Annex IV' is replaced by ´in Annex II'. Article 2 Article 3 of the Protocol is replaced by the following:\n´Article 3 1. The expressions ´´chapters'' and ´´headings'' used in this Protocol shall mean the chapters and the headings (four digit codes) used in the Nomenclature which makes up the ´´Harmonized Commodity Description and Coding System'' (hereinafter referred to as the harmonized system or HS).The expression ´´classified'' shall refer to the classification of a product or material under a particular heading.\n2. For the purposes of Article 1, non-originating materials are considered to be sufficiently worked or processed when the product obtained is classified in a heading which is different from those in which all the non-originating materials used in its manufacture are classified, subject to the provisions of paragraphs 3 and 4. 3. For a product mentioned in columns 1 and 2 of the List in Annex III, the conditions set out in column 3 for the product concerned must be fulfilled instead of the rule in paragraph 2. 4. For the purpose of implementing Article 1, the following shall always be considered as insufficient working or processing to confer the status of originating product, whether or not there is a change of heading:\n(a) operations to ensure the preservation of merchandise in good condition during transport and storage (ventilation, spreading out, drying, chilling, placing in salt, sulphur dioxide or other aqueous solutions, removal of damaged parts, and like operations);\n(b)simple operations consisting of removal of dust, sifting or screening, sorting, classifying, matching (including the making up of sets of articles), washing, painting, cutting up;\n(c)i(i) changes of packaging and breaking up and assembly of consignments;\n(ii)simple placing in bottles, flasks, bags, cases, boxes, fixing on cards or boards, etc.\n, and all other simple packaging operations;\n(d)affixing marks, labels or other like distinguish- ing signs on products or their packaging;\n(e)simple mixing of products, whether or not of different kinds, where one or more components of the mixture do not meet the conditions laid down in this Protocol to enable them to be considered as originating;\n(f)simple assembly of parts of articles to constitute a complete article;\n(g)a combination of two or more operations specified in subparagraphs (a) to (f);\n(h)slaughter of animals.\n'. Article 3 Article 4 of the Protocol is replaced by the following:\n´Article 41. The term ´´value'' in the List in Annex III shall mean the customs value at the time of the import of the non-originating materials used or, if this is not known and cannot be ascertained, the first ascertainable price paid for the materials in the territory concerned.\nWhere the value of the originating materials used needs to be established, this paragraph shall be applied ´´mutatis mutandis''. 2. The term ´´ex works price'' in the List in Annex III shall mean the ex works price of the product obtained minus any internal taxes which are, or may be, repaid when the product obtained is exported.\n'. Article 4 Article 6 of the Protocol is hereby amended as follows:\n1. In paragraph 2, ´Article 3 (3)' is replaced by ´Article 3 (4)', and ´Brussels Nomenclature' by ´harmonized system'. 2.The following paragraph is added:\n´4. Sets within the meaning of General Rule 3 of the harmonized system shall be regarded as originating when all component articles are originating products.\nNevertheless, when a set is composed of originating and non-originating articles, the set as a whole shall be regarded as originating provided that the value of the non-originating articles does not exceed 15 % of the ex works price of the set.\n'. Article 5 1. Annexes I, II and III to this Decision replace Annexes I, II, III and IV to Protocol 2. 2. Annexes V and VI are renumbered IV and V. Article 6 1. Products which were exported before 1 January 1988, accompanied by a movement certificate EUR 1 or form EUR 2, shall be considered as originating under the rules in force on 1 January 1988. 2. Movement certificates EUR 1 or forms EUR 2 issued or made out before 1 January 1988 under the rules in force before that date shall be accepted up to and including 31 May 1988 according to the rules in force when they were issued.\n3. Articles 19 and 20 of the Protocol shall apply in the case of goods exported before 1 January 1988 and retrospective or duplicate movement certificates may be issued under the rules in force before that date.\nArticle 7 Decision No 1/79 is replaced by this Decision.\nArticle 8 This Decision shall apply from 1 January 1989. Done at Brussels, 21 November 1988.", 'labels': [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'input_ids': [101, 312, 251, 111, 30519, 112, 230, 6522, 2138, 118, 1174, 210, 337, 463, 1474, 222, 207, 352, 210, 273, 230, 198, 118, 1174, 210, 207, 30519, 116, 3785, 1102, 312, 1376, 115, 221, 145, 2998, 210, 207, 2500, 210, 207, 14494, 174, 529, 115, 207, 1349, 565, 207, 1229, 210, 207, 2699, 210, 144, 1242, 14914, 11031, 2759, 338, 110, 212, 1781, 210, 495, 1255, 207, 312, 210, 207, 274, 858, 115, 361, 374, 211, 207, 510, 859, 207, 274, 636, 299, 115, 212, 213, 382, 234, 2623, 375, 115, 361, 374, 211, 207, 1290, 238, 207, 250, 115, 400, 207, 232, 859, 237, 1102, 317, 207, 274, 636, 299, 212, 207, 730, 210, 3785, 111, 198, 112, 246, 1211, 222, 433, 463, 2853, 120, 400, 115, 218, 2384, 210, 234, 442, 210, 207, 1349, 565, 207, 1229, 210, 207, 2699, 210, 144, 1242, 14914, 11031, 2759, 338, 110, 212, 1781, 210, 495, 1255, 115, 229, 1764, 237, 3944, 332, 210, 207, 348, 232, 115, 207, 30519, 116, 3785, 1102, 312, 249, 601, 273, 230, 198, 118, 1174, 1376, 207, 786, 1349, 120, 400, 233, 223, 369, 211, 549, 226, 273, 213, 207, 299, 115, 249, 601, 226, 251, 119, 234, 198, 273, 230, 198, 118, 1174, 210, 207, 30519, 116, 3785, 1102, 312, 224, 549, 213, 207, 299, 117, 207, 1314, 210, 207, 273, 223, 1250, 211, 226, 251, 117, 234, 199, 226, 251, 224, 824, 288, 539, 222, 207, 414, 298, 216, 210, 239, 1279, 213, 207, 524, 718, 210, 207, 274, 858, 117, 233, 224, 549, 238, 198, 609, 1464, 117, 226, 251, 224, 219, 782, 213, 239, 1427, 212, 656, 278, 213, 241, 262, 265, 117, 946, 236, 18307, 7237, 189, 115, 337, 463, 1474, 117, 217, 207, 312, 207, 707, 155, 117, 12205, 184, 171, 195, 185, 1386, 191, 111, 198, 112, 381, 230, 156, 3608, 115, 441, 117, 202, 117, 3083, 115, 160, 117, 199, 117, 273, 230, 198, 118, 1174, 210, 207, 30519, 116, 3785, 1102, 312, 210, 441, 713, 1474, 1376, 115, 221, 145, 2998, 210, 207, 2500, 210, 207, 14494, 174, 529, 115, 1349, 199, 565, 207, 1229, 210, 207, 2699, 210, 144, 1242, 14914, 11031, 2759, 338, 110, 212, 1781, 210, 495, 1255, 207, 1102, 312, 115, 361, 374, 211, 207, 232, 4527, 237, 1102, 317, 207, 274, 636, 299, 212, 207, 730, 210, 3785, 115, 1211, 222, 433, 463, 2853, 115, 361, 374, 211, 207, 1349, 565, 207, 1229, 210, 207, 2699, 210, 144, 1242, 14914, 11031, 2759, 338, 110, 212, 1781, 210, 495, 1255, 115, 212, 213, 382, 234, 442, 375, 115, 400, 207, 1401, 409, 679, 213, 207, 786, 1349, 244, 487, 222, 207, 355, 210, 207, 883, 1255, 312, 230, 3129, 3143, 120, 400, 207, 883, 1255, 312, 957, 207, 793, 431, 222, 207, 14494, 174, 4672, 1248, 212, 4404, 235, 529, 111, 1404, 385, 211, 221, 207, 144, 9243, 9965, 2387, 529, 110, 112, 222, 368, 557, 1577, 120, 400, 233, 223, 207, 2249, 216, 115, 221, 238, 198, 609, 1474, 115, 207, 14494, 174, 102], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}.
+INFO:__main__:Sample 37303 of the training set: {'text': 'COMMISSION REGULATION (EC) No 2321/94 of 28 September 1994 fixing the number of young male bovine animals which may be imported on special terms in the fourth quarter of 1994 and derogating from Regulation (EEC) No 2377/80 in respect of that quarter as regards the allocation of the quantities available\nTHE COMMISSION OF THE EUROPEAN COMMUNITIES,\nHaving regard to the Treaty establishing the European Community,\nHaving regard to Council Regulation (EEC) No 805/68 of 27 June 1968 on the common organization of the market in beef and veal (1), as last amended by Commission Regulation (EC) No 1884/94 (2), and in particular Articles 13 (4), 15 (2) and 25 thereof,\nWhereas the Council has drawn up an estimated supply balance of 198 000 head under the new import arrangements applicable to young male bovine animals intended for fattening for the period 1 January to 31 December 1994; whereas, pursuant to Article 13 (4) (a) of Regulation (EEC) No 805/68, the number which may be imported each quarter and the rate of reduction in the import levy on such animals must be determined;\nWhereas detailed rules for the application of these special arrangements were laid down in Commission Regulation (EEC) No 612/77 (3), as last amended by Regulation (EEC) No 1121/87 (4), and in Commission Regulation (EEC) No 2377/80 (5), as last amended by Regulation (EC) No 1084/94 (6);\nWhereas the supply requirements of certain regions of the Community which have a serious shortfall in bovine animals for fattening must be taken into account; whereas those requirements are apparent in Italy and Greece and may be estimated, for the fourth quarter of 1994, at 42 120 head and 6 435 head respectively in those Member States;\nWhereas Council Regulation (EEC) No 1432/92 (7), as last amended by Regulation (EEC) No 3534/92 (8), prohibits trade between the European Community and the Republics of Serbia and Montenegro; whereas these Republics are therefore excluded from those arrangements;\nWhereas the supply requirements in young bovine animals for fattening justify, for the fourth quarter of 1994, a higher rate of reduction in the levy on animals weighing from 160 to 300 kilograms per head, originating in and coming from Hungary, Poland, the Czech Republic, the Slovak Republic, Romania, Slovenia or Bulgaria;\nWhereas each of the quantities available in Italy and Greece should be divided into two tranches; whereas one of the two tranches, corresponding to 80 %, should be allocated to traditional importers; whereas the other tranche, corresponding to 20 %, should be allocated to operators who have engaged in some trade in live animals with third countries, in order to give them progressive access to the import arrangements in question; whereas a derogation from Article 9 (1) (a) of Regulation (EEC) No 2377/80 is accordingly required in order to ensure proper administration of the share allocated to such operators;\nWhereas, in order to simplify the procedure for allocating the quantities available, it is necessary to derogate from Regulation (EEC) No 2377/80; whereas, in the case of traditional importers, the quantities available should be allocated directly in proportion to the number of head imported during the last three years; whereas, in the case of operators eligible for the 20 % tranche, the quantities available should be allocated directly in proportion to the number of head for which application is made;\nWhereas, in the case of such operators, the maximum quantity which each application for an import licence may cover must, however, be limited, in order to permit a wider allocation of the quantities available; whereas for financial reasons a minimum number of head per application should nevertheless be set;\nWhereas the measures provided for in this Regulation are in accordance with the opinion of the Management Committee for Beef and Veal,\nHAS ADOPTED THIS REGULATION:\nArticle 1\n1. For the period 1 October to 31 December 1994, the maximum number referred to in Article 13 (4) (a) of Regulation (EEC) No 805/68 shall be 48 555 head of young male bovine animals for fattening comprising:\n(a) 6 315 of a live weight of not more than 300 kilograms per head and subject to a 65 % reduction in the levy; and\n(b) 42 240 of a live weight of 160 to 300 kilograms per head, originating in and coming from Hungary, Poland, the Czech Republic, the Slovak Republic, Romania, Slovenia or Bulgaria and subject to a 75 % reduction in the levy.\n2. The reductions referred to in paragraph 1 shall be in respect of the levy applicable on the day of acceptance of the declaration of release for free circulation.\n3. The quantities referred to in paragraph 1 shall be allocated as follows:\n""" ID="1">5 480> ID="2">835"> ID="1">36 640> ID="2">5 600">\n4. Licence applications shall, notwithstanding Article 9 (1) (c) of Regulation (EEC) No 2377/80, relate to:\n- either young bovine animals weighing not more than 300 kilograms per head,\n- or young bovine animals weighing from 160 to 300 kilograms per head, originating in and coming from Hungary, Poland, the Czech Republic, the Slovak Republic, Romania, Slovenia or Bulgaria.\nIn the latter case, Sections 7 and 8 of licence applications and licences shall include one of the following entries:\n- Hungría y/o Polonia y/o República Checa y/o República Eslovaca y/o Rumanía y/o Eslovenia y/o Bulgaria,\n- Ungarn og/eller Polen og/eller Den Tjekkiske Republik og/eller Den Slovakiske Republik og/eller Rumaenien og/eller Slovenien og/eller Bulgarien,\n- Ungarn und/oder Polen und/oder Tschechische Republik und/oder Slowakische Republik und/oder Rumaenien und/oder Slowenien und/oder Bulgarien,\n- Oyngaria i/kai Polonia i/kai Tsechiki Dimokratia i/kai Slovakiki Dimokratia i/kai Slovenia i/kai Roymania i/kai Voylgaria,\n- Hungary and/or Poland and/or Czech Republic and/or Slovak Republic and/or Romania and/or Slovenia and/or Bulgaria,\n- Hongrie et/ou Pologne et/ou République tchèque et/ou République slovaque et/ou Roumanie et/ou Slovénie et/ou Bulgarie,\n- Ungheria e/o Pologna e/o Repubblica ceca e/o Repubblica slovacca e/o Romania e/o Slovenia e/o Bulgaria,\n- Hongarije en/of Polen en/of Tsjechische Republiek en/of Slowaakse Republiek en/of Roemenië en/of Slovenië en/of Bulgarije,\n- Hungria e/ou Polónia e/ou República Checa e/ou República Eslovaca e/ou Roménia e/ou Eslovénia e/ou Bulgária.\nLicences shall carry with them an obligation to import from one or more of the countries indicated.\n5. Import licences as specified in the first indent of the first subparagraph of paragraph 4 shall not give the right to import animals originating in the Republic of Serbia or Montenegro.\n6. In the information referred to in Article 15 (4) (a) of Regulation (EEC) No 2377/80, Member States shall specify the category of live weight and the origin of the products in the case referred to in the second indent of the first subparagraph of paragraph 4.\n7. Of the number of head reserved for Italy and Greece for each category notwithstanding Article 9 (1) (a) and Article 15 (6) (a) of Regulation (EEC) No 2377/80:\n(a) import licences relating to 80 % of the number of head referred to above may be allocated directly to importers who provide proof of having imported animals qualifying under this scheme during the last three calendar years. Numbers covered by licences shall be allocated in proportion to the number of head imported in the three years concerned;\n(b) import licences relating to the remaining 20 % may be allocated directly to operators entered in a public register in a Member State who can prove that they exported/imported in 1993 at least 50 live animals falling within CN code 0102 90 excluding imports under the falling Commission Regulations:\n- (EEC) No 2753/92 (9),\n- (EEC) No 3806/92 (10),\n- (EEC) No 733/93 (11),\n- (EEC) No 1622/93 (12), and\n- (EEC) No 2657/93 (13).\nThe import licence application must be submitted in Italy or in Greece.\n8. The proof referred to in paragraph 7 shall be provided by the customs document of release for free circulation or export document.\nArticle 2\n1. As regards the quantities referred to in Article 1 (7) (b) applications for import licences shall:\n(a) relate to a number equal to or more than 50 head; and\n(b) relate to a quantity not exceeding 10 % of the quantities available except where the said 10 % results in a figure of less than 50 head; in the latter case the maximum figure shall also be 50 head.\n2. In cases where applications for import licences state quantities in excess of those provided for by this Regulation, those applications shall only be considered within the limits of the said quantities.\n3. Numbers shall be allocated in proportion to the number of head for which application is made by the operators eligible. If, because of the number for which application is made, the percentage reduction results in fewer than 20 head per import licence, the Member States shall, by drawing lots, be allocated licences covering 20 head.\nArticle 3\nNotwithstanding Article 8 (4) of Commission Regulation (EEC) No 3719/88 (14), the levy shall be collected in full in respect of quantities in excess of those stated on the import licence.\nArticle 4\nNotwithstanding Article 9 (1) (e) and (f) of Regulation (EEC) No 2377/80, the terms \'220 kg\' and \'Yugoslavia and/or Poland and/or Hungary\' laid down in those provisions shall be read respectively as \'160 kg\' and \'Hungary and/or Poland and/or the Czech Republic and/or the Slovak Republic and/or Romania and/or Slovenia and/or Bulgaria\'.\nArticle 5\nFor the purposes of Article 15 (3) of Regulation (EEC) No 2377/80, all applications from one applicant, which relate to the same category of weight and the same rate of reduction in the levy, shall be treated as one application.\nArticle 6\nThe security for the import licence shall be lodged at the time of issue of the said licence.\nArticle 7\nThree weeks at the latest after import of the livestock referred to in this Regulation, importers shall inform the competent authorities which issued the import licences, of the number and origin of the animals imported. Those authorities shall forward that information to the Commission at the beginning of each month.\nArticle 8\nThis Regulation shall enter into force on the third day following its publication in the Official Journal of the European Communities.\nThis Regulation shall be binding in its entirety and directly applicable in all Member States.\nDone at Brussels, 28 September 1994.', 'labels': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'input_ids': [101, 250, 251, 111, 285, 112, 230, 23830, 118, 1001, 210, 508, 732, 1077, 2080, 207, 394, 210, 3289, 4952, 3256, 1383, 919, 189, 229, 245, 219, 2055, 222, 629, 333, 213, 207, 1567, 1819, 210, 1077, 212, 7642, 235, 238, 251, 111, 30519, 112, 230, 11397, 118, 896, 213, 267, 210, 216, 1819, 221, 988, 207, 1725, 210, 207, 1494, 537, 207, 250, 210, 207, 274, 858, 115, 361, 374, 211, 207, 510, 859, 207, 274, 299, 115, 361, 374, 211, 312, 251, 111, 30519, 112, 230, 6516, 118, 1317, 210, 554, 557, 5191, 2758, 222, 207, 346, 1445, 210, 207, 327, 213, 3208, 212, 166, 14737, 111, 198, 112, 115, 221, 716, 396, 218, 250, 251, 111, 285, 112, 230, 24696, 118, 1001, 111, 199, 112, 115, 212, 213, 382, 727, 337, 111, 201, 112, 115, 342, 111, 199, 112, 212, 442, 375, 115, 400, 207, 312, 249, 1965, 459, 237, 2281, 1010, 964, 210, 5092, 304, 1734, 242, 207, 350, 573, 1236, 278, 211, 3289, 4952, 3256, 1383, 919, 189, 752, 217, 9419, 7868, 2759, 217, 207, 287, 198, 609, 211, 415, 463, 1077, 120, 400, 115, 294, 211, 234, 337, 111, 201, 112, 111, 145, 112, 210, 251, 111, 30519, 112, 230, 6516, 118, 1317, 115, 207, 394, 229, 245, 219, 2055, 260, 1819, 212, 207, 449, 210, 1252, 213, 207, 573, 2293, 222, 228, 919, 189, 311, 219, 657, 120, 400, 1369, 409, 217, 207, 352, 210, 392, 629, 1236, 292, 764, 476, 213, 250, 251, 111, 30519, 112, 230, 6963, 118, 1147, 111, 200, 112, 115, 221, 716, 396, 218, 251, 111, 30519, 112, 230, 18331, 118, 1074, 111, 201, 112, 115, 212, 213, 250, 251, 111, 30519, 112, 230, 11397, 118, 896, 111, 202, 112, 115, 221, 716, 396, 218, 251, 111, 285, 112, 230, 21498, 118, 1001, 111, 203, 112, 120, 400, 207, 1010, 506, 210, 411, 2205, 210, 207, 299, 229, 247, 145, 1684, 6555, 213, 3256, 1383, 919, 189, 217, 9419, 7868, 2759, 311, 219, 484, 288, 366, 120, 400, 324, 506, 244, 2908, 213, 1657, 212, 2444, 212, 245, 219, 2281, 115, 217, 207, 1567, 1819, 210, 1077, 115, 236, 925, 2047, 1734, 212, 203, 6540, 1734, 1913, 213, 324, 262, 265, 120, 400, 312, 251, 111, 30519, 112, 230, 24736, 118, 882, 111, 204, 112, 115, 221, 716, 396, 218, 251, 111, 30519, 112, 230, 6317, 2138, 118, 882, 111, 205, 112, 115, 5019, 616, 317, 207, 274, 299, 212, 207, 730, 189, 210, 6093, 212, 7773, 120, 400, 392, 730, 189, 244, 420, 1881, 238, 324, 1236, 120, 400, 207, 1010, 506, 213, 3289, 3256, 1383, 919, 189, 217, 9419, 7868, 2759, 2636, 115, 217, 207, 1567, 1819, 210, 1077, 115, 145, 1835, 449, 210, 1252, 213, 207, 2293, 222, 919, 189, 3922, 235, 238, 3099, 211, 2036, 4021, 189, 558, 1734, 115, 1460, 235, 213, 212, 4144, 238, 3524, 195, 115, 2264, 115, 207, 3602, 730, 115, 207, 6208, 730, 115, 2914, 115, 4351, 215, 2988, 120, 400, 260, 210, 207, 1494, 537, 213, 1657, 212, 2444, 102], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}.
+INFO:__main__:Sample 52577 of the training set: {'text': "COMMISSION DECISION of 16 December 1992 authorizing methods for grading pig carcases in Portugal (Only the Portuguese text is authentic)\n(93/34/EEC)THE COMMISSION OF THE EUROPEAN COMMUNITIES,\nHaving regard to the Treaty establishing the European Economic Community,\nHaving regard to Council Regulation (EEC) No 3220/84 of 13 November 1984 determining the Community scale for grading pig carcases (1), as last amended by Regulation (EEC) No 3577/90 (2), and in particular Article 5 (2) thereof,\nWhereas Article 2 (3) of Regulation (EEC) No 3220/84 provides that the grading of pig carcases must be determined by estimating the content of lean meat in accordance with statistically proven assessment methods based on the physical measurement of one or more anatomical parts of the pig carcase; whereas the authorization of grading methods is subject to compliance with a maximum tolerance for statistical error in assessment; whereas this tolerance has been defined in Article 3 of Commission Regulation (EEC) No 2967/85 of 24 October 1985 laying down detailed rules for the application of the Community scale for grading pig carcases (3);\nWhereas the Government of Portugal has requested the Commission to authorize the use of three methods for grading pig carcases on its territory and has submitted the information required in Article 3 of Regulation (EEC) No 2967/85; whereas an examination of this request has revealed that the conditions for authorizing the said grading methods are fulfilled;\nWhereas no modification of the apparatus or grading method may be authorized except by means of a new Commission Decision adopted in the light of experience gained;\nWhereas the measures provided for in this Decision are in accordance with the opinion of the Management Committee for Pigmeat,\nHAS ADOPTED THIS DECISION:\nArticle 1\nThe use of the following methods is hereby authorized for grading pig carcases pursuant to Regulation (EEC) No 3220/84 in Portugal:\n- the apparatus termed 'Intrascope (Optical Probe)' and assessment methods related thereto, details of which are given in Part 1 of the Annex,\n- the apparatus termed 'Fat-O-Meater (FOM)' and assessment methods related thereto, details of which are given in Part 2 of the Annex,\n- the apparatus termed 'Hennessy Grading Probe (HGP II)' and assessment methods related thereto, details of which are given in Part 3 of the Annex.\nArticle 2\nModifications of the apparatus or of the assessment methods shall not be authorized.\nArticle 3\nThis Decision is addressed to the Portuguese Republic.\nDone at Brussels, 16 December 1992.", 'labels': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], 'input_ids': [101, 250, 273, 210, 404, 463, 1167, 4652, 235, 1781, 217, 9186, 4223, 7567, 7180, 189, 213, 2496, 182, 111, 307, 207, 3172, 175, 1314, 223, 3039, 112, 111, 951, 118, 912, 118, 30519, 112, 207, 250, 210, 207, 274, 858, 115, 361, 374, 211, 207, 510, 859, 207, 274, 636, 299, 115, 361, 374, 211, 312, 251, 111, 30519, 112, 230, 5536, 2311, 118, 1244, 210, 337, 713, 1751, 1455, 207, 299, 2884, 217, 9186, 4223, 7567, 7180, 189, 111, 198, 112, 115, 221, 716, 396, 218, 251, 111, 30519, 112, 230, 22275, 118, 456, 111, 199, 112, 115, 212, 213, 382, 234, 202, 111, 199, 112, 375, 115, 400, 234, 199, 111, 200, 112, 210, 251, 111, 30519, 112, 230, 5536, 2311, 118, 1244, 783, 216, 207, 9186, 210, 4223, 7567, 7180, 189, 311, 219, 657, 218, 15967, 235, 207, 1259, 210, 11638, 1901, 213, 295, 225, 2972, 301, 5108, 747, 1781, 487, 222, 207, 1865, 2626, 210, 289, 215, 353, 237, 2164, 5481, 1483, 210, 207, 4223, 7567, 7180, 120, 400, 207, 1521, 210, 9186, 1781, 223, 309, 211, 739, 225, 145, 930, 5805, 217, 2972, 1675, 213, 747, 120, 400, 226, 5805, 249, 255, 512, 213, 234, 200, 210, 250, 251, 111, 30519, 112, 230, 5520, 2450, 118, 924, 210, 498, 647, 1658, 1559, 476, 1369, 409, 217, 207, 352, 210, 207, 299, 2884, 217, 9186, 4223, 7567, 7180, 189, 111, 200, 112, 120, 400, 207, 389, 210, 2496, 182, 249, 787, 207, 250, 211, 2612, 207, 355, 210, 584, 1781, 217, 9186, 4223, 7567, 7180, 189, 222, 239, 1109, 212, 249, 642, 207, 286, 329, 213, 234, 200, 210, 251, 111, 30519, 112, 230, 5520, 2450, 118, 924, 120, 400, 237, 1163, 210, 226, 485, 249, 5473, 216, 207, 364, 217, 4652, 235, 207, 786, 9186, 1781, 244, 3152, 120, 400, 230, 1828, 210, 207, 2731, 215, 9186, 1243, 245, 219, 755, 419, 218, 358, 210, 145, 350, 250, 273, 601, 213, 207, 901, 210, 2196, 7633, 120, 400, 207, 412, 271, 217, 213, 226, 273, 244, 213, 295, 225, 207, 528, 210, 207, 567, 526, 217, 4223, 3681, 115, 249, 601, 226, 273, 119, 234, 198, 207, 355, 210, 207, 298, 1781, 223, 457, 755, 217, 9186, 4223, 7567, 7180, 189, 294, 211, 251, 111, 30519, 112, 230, 5536, 2311, 118, 1244, 213, 2496, 182, 119, 116, 207, 2731, 425, 252, 110, 3419, 20846, 111, 5878, 10550, 112, 110, 212, 747, 1781, 497, 772, 115, 2194, 210, 229, 244, 467, 213, 332, 198, 210, 207, 379, 115, 116, 207, 2731, 425, 252, 110, 2400, 116, 159, 116, 1901, 577, 111, 3849, 183, 112, 110, 212, 747, 1781, 497, 772, 115, 2194, 210, 229, 244, 467, 213, 332, 199, 210, 207, 379, 115, 116, 207, 2731, 425, 252, 110, 21397, 189, 189, 195, 9186, 10550, 111, 152, 177, 186, 290, 112, 110, 212, 747, 1781, 497, 772, 115, 2194, 210, 229, 244, 467, 213, 332, 200, 210, 207, 379, 117, 234, 199, 3113, 210, 207, 2731, 215, 210, 207, 747, 1781, 224, 227, 219, 755, 117, 102], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}.
+Running tokenizer on validation dataset:   0% 0/5 [00:00<?, ?ba/s]INFO:datasets.arrow_dataset:Caching processed dataset at /root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043/cache-05244327c2d3ea4f.arrow
+Running tokenizer on validation dataset: 100% 5/5 [00:19<00:00,  3.98s/ba]
+WARNING:datasets.arrow_dataset:Loading cached processed dataset at /root/.cache/huggingface/datasets/lex_glue/eurlex/1.0.0/c3c0bd7433b636dc39ae49a84dc401190c73156617efc415b04e9835a93a7043/cache-4425027371c468a3.arrow
+[INFO|trainer.py:723] 2022-09-12 18:59:25,084 >> The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: text. If text are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+[INFO|trainer.py:1605] 2022-09-12 18:59:25,095 >> ***** Running training *****
+[INFO|trainer.py:1606] 2022-09-12 18:59:25,095 >>   Num examples = 55000
+[INFO|trainer.py:1607] 2022-09-12 18:59:25,095 >>   Num Epochs = 2
+[INFO|trainer.py:1608] 2022-09-12 18:59:25,095 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:1609] 2022-09-12 18:59:25,095 >>   Total train batch size (w. parallel, distributed & accumulation) = 8
+[INFO|trainer.py:1610] 2022-09-12 18:59:25,095 >>   Gradient Accumulation steps = 4
+[INFO|trainer.py:1611] 2022-09-12 18:59:25,095 >>   Total optimization steps = 13750
+{'loss': 0.2031, 'learning_rate': 2.890909090909091e-05, 'epoch': 0.07}
+{'loss': 0.121, 'learning_rate': 2.7818181818181818e-05, 'epoch': 0.15}
+{'loss': 0.1087, 'learning_rate': 2.6727272727272728e-05, 'epoch': 0.22}
+{'loss': 0.0969, 'learning_rate': 2.5636363636363635e-05, 'epoch': 0.29}
+{'loss': 0.0879, 'learning_rate': 2.454545454545455e-05, 'epoch': 0.36}
+{'loss': 0.082, 'learning_rate': 2.3454545454545456e-05, 'epoch': 0.44}
+{'loss': 0.0764, 'learning_rate': 2.2363636363636366e-05, 'epoch': 0.51}
+{'loss': 0.0724, 'learning_rate': 2.1272727272727273e-05, 'epoch': 0.58}
+{'loss': 0.0706, 'learning_rate': 2.0181818181818183e-05, 'epoch': 0.65}
+{'loss': 0.0678, 'learning_rate': 1.909090909090909e-05, 'epoch': 0.73}
+{'loss': 0.0651, 'learning_rate': 1.8e-05, 'epoch': 0.8}
+{'loss': 0.0641, 'learning_rate': 1.6909090909090907e-05, 'epoch': 0.87}
+{'loss': 0.0623, 'learning_rate': 1.5818181818181818e-05, 'epoch': 0.95}
+ 50% 6875/13750 [18:50<18:42,  6.13it/s][INFO|trainer.py:723] 2022-09-12 19:18:15,137 >> The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: text. If text are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:2891] 2022-09-12 19:18:15,139 >> ***** Running Evaluation *****
+[INFO|trainer.py:2893] 2022-09-12 19:18:15,140 >>   Num examples = 5000
+[INFO|trainer.py:2896] 2022-09-12 19:18:15,140 >>   Batch size = 2
+
+  0% 0/2500 [00:00<?, ?it/s]
+  0% 9/2500 [00:00<00:31, 79.08it/s]
+  1% 17/2500 [00:00<00:33, 73.28it/s]
+  1% 25/2500 [00:00<00:34, 71.47it/s]
+  1% 33/2500 [00:00<00:34, 70.64it/s]
+  2% 41/2500 [00:00<00:35, 70.15it/s]
+  2% 49/2500 [00:00<00:34, 70.11it/s]
+  2% 57/2500 [00:00<00:35, 69.55it/s]
+  3% 64/2500 [00:00<00:35, 69.29it/s]
+  3% 71/2500 [00:01<00:35, 69.37it/s]
+  3% 78/2500 [00:01<00:34, 69.38it/s]
+  3% 85/2500 [00:01<00:34, 69.45it/s]
+  4% 93/2500 [00:01<00:34, 69.63it/s]
+  4% 100/2500 [00:01<00:34, 69.51it/s]
+  4% 108/2500 [00:01<00:34, 69.76it/s]
+  5% 116/2500 [00:01<00:34, 69.91it/s]
+  5% 123/2500 [00:01<00:34, 69.04it/s]
+  5% 130/2500 [00:01<00:34, 69.15it/s]
+  6% 138/2500 [00:01<00:34, 69.47it/s]
+  6% 145/2500 [00:02<00:33, 69.37it/s]
+  6% 152/2500 [00:02<00:33, 69.29it/s]
+  6% 159/2500 [00:02<00:33, 69.44it/s]
+  7% 166/2500 [00:02<00:33, 69.05it/s]
+  7% 173/2500 [00:02<00:33, 68.64it/s]
+  7% 181/2500 [00:02<00:33, 69.08it/s]
+  8% 188/2500 [00:02<00:33, 68.91it/s]
+  8% 195/2500 [00:02<00:33, 68.68it/s]
+  8% 202/2500 [00:02<00:33, 69.01it/s]
+  8% 209/2500 [00:03<00:33, 68.52it/s]
+  9% 217/2500 [00:03<00:33, 69.05it/s]
+  9% 224/2500 [00:03<00:32, 69.01it/s]
+  9% 231/2500 [00:03<00:32, 68.82it/s]
+ 10% 239/2500 [00:03<00:32, 69.22it/s]
+ 10% 246/2500 [00:03<00:32, 68.99it/s]
+ 10% 253/2500 [00:03<00:32, 69.01it/s]
+ 10% 260/2500 [00:03<00:32, 69.25it/s]
+ 11% 267/2500 [00:03<00:32, 68.19it/s]
+ 11% 274/2500 [00:03<00:32, 68.25it/s]
+ 11% 281/2500 [00:04<00:32, 68.72it/s]
+ 12% 288/2500 [00:04<00:32, 68.37it/s]
+ 12% 295/2500 [00:04<00:32, 68.85it/s]
+ 12% 302/2500 [00:04<00:31, 69.17it/s]
+ 12% 309/2500 [00:04<00:31, 69.08it/s]
+ 13% 316/2500 [00:04<00:31, 69.34it/s]
+ 13% 324/2500 [00:04<00:31, 69.56it/s]
+ 13% 331/2500 [00:04<00:31, 69.19it/s]
+ 14% 338/2500 [00:04<00:31, 68.61it/s]
+ 14% 345/2500 [00:04<00:31, 68.76it/s]
+ 14% 352/2500 [00:05<00:31, 68.75it/s]
+ 14% 359/2500 [00:05<00:31, 68.79it/s]
+ 15% 366/2500 [00:05<00:30, 69.03it/s]
+ 15% 373/2500 [00:05<00:30, 68.74it/s]
+ 15% 381/2500 [00:05<00:30, 69.08it/s]
+ 16% 389/2500 [00:05<00:30, 69.35it/s]
+ 16% 396/2500 [00:05<00:30, 69.16it/s]
+ 16% 403/2500 [00:05<00:30, 69.00it/s]
+ 16% 410/2500 [00:05<00:30, 68.67it/s]
+ 17% 417/2500 [00:06<00:30, 68.54it/s]
+ 17% 424/2500 [00:06<00:30, 68.81it/s]
+ 17% 431/2500 [00:06<00:29, 69.02it/s]
+ 18% 438/2500 [00:06<00:30, 68.69it/s]
+ 18% 445/2500 [00:06<00:29, 68.87it/s]
+ 18% 452/2500 [00:06<00:29, 68.98it/s]
+ 18% 459/2500 [00:06<00:29, 69.00it/s]
+ 19% 466/2500 [00:06<00:29, 68.77it/s]
+ 19% 473/2500 [00:06<00:29, 68.76it/s]
+ 19% 480/2500 [00:06<00:29, 68.71it/s]
+ 19% 487/2500 [00:07<00:29, 68.84it/s]
+ 20% 494/2500 [00:07<00:29, 69.08it/s]
+ 20% 501/2500 [00:07<00:28, 69.21it/s]
+ 20% 508/2500 [00:07<00:28, 69.11it/s]
+ 21% 515/2500 [00:07<00:28, 69.23it/s]
+ 21% 522/2500 [00:07<00:28, 69.16it/s]
+ 21% 529/2500 [00:07<00:28, 68.28it/s]
+ 21% 536/2500 [00:07<00:28, 68.37it/s]
+ 22% 543/2500 [00:07<00:28, 67.96it/s]
+ 22% 550/2500 [00:07<00:28, 67.99it/s]
+ 22% 557/2500 [00:08<00:28, 68.36it/s]
+ 23% 564/2500 [00:08<00:28, 68.25it/s]
+ 23% 571/2500 [00:08<00:28, 68.70it/s]
+ 23% 578/2500 [00:08<00:27, 68.92it/s]
+ 23% 585/2500 [00:08<00:27, 68.43it/s]
+ 24% 592/2500 [00:08<00:27, 68.87it/s]
+ 24% 599/2500 [00:08<00:27, 69.06it/s]
+ 24% 606/2500 [00:08<00:27, 68.65it/s]
+ 25% 613/2500 [00:08<00:27, 68.47it/s]
+ 25% 620/2500 [00:08<00:27, 68.58it/s]
+ 25% 627/2500 [00:09<00:27, 68.50it/s]
+ 25% 634/2500 [00:09<00:27, 68.69it/s]
+ 26% 641/2500 [00:09<00:26, 68.97it/s]
+ 26% 648/2500 [00:09<00:26, 68.93it/s]
+ 26% 655/2500 [00:09<00:26, 69.12it/s]
+ 26% 662/2500 [00:09<00:26, 69.09it/s]
+ 27% 669/2500 [00:09<00:26, 68.63it/s]
+ 27% 676/2500 [00:09<00:26, 68.82it/s]
+ 27% 683/2500 [00:09<00:26, 68.78it/s]
+ 28% 690/2500 [00:10<00:26, 67.48it/s]
+ 28% 697/2500 [00:10<00:26, 68.12it/s]
+ 28% 705/2500 [00:10<00:26, 68.68it/s]
+ 28% 712/2500 [00:10<00:26, 68.50it/s]
+ 29% 719/2500 [00:10<00:25, 68.76it/s]
+ 29% 726/2500 [00:10<00:25, 68.87it/s]
+ 29% 733/2500 [00:10<00:25, 68.49it/s]
+ 30% 740/2500 [00:10<00:25, 68.92it/s]
+ 30% 747/2500 [00:10<00:25, 68.81it/s]
+ 30% 754/2500 [00:10<00:25, 68.24it/s]
+ 30% 761/2500 [00:11<00:25, 68.56it/s]
+ 31% 768/2500 [00:11<00:25, 68.96it/s]
+ 31% 775/2500 [00:11<00:25, 68.55it/s]
+ 31% 782/2500 [00:11<00:25, 68.69it/s]
+ 32% 789/2500 [00:11<00:24, 68.83it/s]
+ 32% 796/2500 [00:11<00:24, 68.83it/s]
+ 32% 803/2500 [00:11<00:24, 68.84it/s]
+ 32% 810/2500 [00:11<00:24, 68.61it/s]
+ 33% 817/2500 [00:11<00:24, 68.19it/s]
+ 33% 824/2500 [00:11<00:24, 68.06it/s]
+ 33% 831/2500 [00:12<00:24, 68.51it/s]
+ 34% 838/2500 [00:12<00:24, 68.24it/s]
+ 34% 845/2500 [00:12<00:24, 68.62it/s]
+ 34% 852/2500 [00:12<00:23, 68.98it/s]
+ 34% 859/2500 [00:12<00:23, 68.42it/s]
+ 35% 866/2500 [00:12<00:23, 68.71it/s]
+ 35% 873/2500 [00:12<00:23, 68.74it/s]
+ 35% 880/2500 [00:12<00:23, 68.57it/s]
+ 35% 887/2500 [00:12<00:23, 68.05it/s]
+ 36% 894/2500 [00:12<00:23, 67.19it/s]
+ 36% 901/2500 [00:13<00:23, 67.43it/s]
+ 36% 908/2500 [00:13<00:23, 67.85it/s]
+ 37% 915/2500 [00:13<00:23, 68.06it/s]
+ 37% 922/2500 [00:13<00:23, 68.21it/s]
+ 37% 929/2500 [00:13<00:22, 68.48it/s]
+ 37% 936/2500 [00:13<00:22, 68.84it/s]
+ 38% 943/2500 [00:13<00:22, 68.56it/s]
+ 38% 950/2500 [00:13<00:22, 68.38it/s]
+ 38% 957/2500 [00:13<00:22, 68.57it/s]
+ 39% 964/2500 [00:14<00:22, 67.52it/s]
+ 39% 971/2500 [00:14<00:22, 68.03it/s]
+ 39% 978/2500 [00:14<00:22, 68.33it/s]
+ 39% 985/2500 [00:14<00:22, 68.32it/s]
+ 40% 992/2500 [00:14<00:21, 68.77it/s]
+ 40% 999/2500 [00:14<00:21, 68.95it/s]
+ 40% 1006/2500 [00:14<00:21, 68.81it/s]
+ 41% 1013/2500 [00:14<00:21, 68.86it/s]
+ 41% 1020/2500 [00:14<00:21, 68.95it/s]
+ 41% 1027/2500 [00:14<00:21, 68.43it/s]
+ 41% 1034/2500 [00:15<00:21, 68.21it/s]
+ 42% 1041/2500 [00:15<00:21, 68.60it/s]
+ 42% 1048/2500 [00:15<00:21, 68.45it/s]
+ 42% 1055/2500 [00:15<00:21, 68.33it/s]
+ 42% 1062/2500 [00:15<00:20, 68.54it/s]
+ 43% 1069/2500 [00:15<00:20, 68.46it/s]
+ 43% 1076/2500 [00:15<00:20, 68.85it/s]
+ 43% 1083/2500 [00:15<00:20, 68.86it/s]
+ 44% 1090/2500 [00:15<00:20, 68.58it/s]
+ 44% 1097/2500 [00:15<00:20, 68.20it/s]
+ 44% 1104/2500 [00:16<00:20, 68.33it/s]
+ 44% 1111/2500 [00:16<00:20, 67.77it/s]
+ 45% 1118/2500 [00:16<00:20, 68.15it/s]
+ 45% 1125/2500 [00:16<00:20, 68.45it/s]
+ 45% 1132/2500 [00:16<00:19, 68.53it/s]
+ 46% 1139/2500 [00:16<00:19, 68.29it/s]
+ 46% 1146/2500 [00:16<00:19, 68.31it/s]
+ 46% 1153/2500 [00:16<00:19, 68.08it/s]
+ 46% 1160/2500 [00:16<00:19, 68.64it/s]
+ 47% 1167/2500 [00:16<00:19, 68.30it/s]
+ 47% 1174/2500 [00:17<00:19, 67.83it/s]
+ 47% 1181/2500 [00:17<00:19, 68.17it/s]
+ 48% 1189/2500 [00:17<00:19, 68.61it/s]
+ 48% 1196/2500 [00:17<00:19, 68.16it/s]
+ 48% 1203/2500 [00:17<00:19, 68.25it/s]
+ 48% 1210/2500 [00:17<00:18, 68.38it/s]
+ 49% 1217/2500 [00:17<00:18, 67.74it/s]
+ 49% 1224/2500 [00:17<00:18, 68.23it/s]
+ 49% 1231/2500 [00:17<00:18, 67.85it/s]
+ 50% 1238/2500 [00:18<00:18, 68.26it/s]
+ 50% 1245/2500 [00:18<00:18, 68.21it/s]
+ 50% 1252/2500 [00:18<00:18, 68.28it/s]
+ 50% 1259/2500 [00:18<00:18, 68.42it/s]
+ 51% 1266/2500 [00:18<00:18, 68.22it/s]
+ 51% 1273/2500 [00:18<00:18, 67.62it/s]
+ 51% 1280/2500 [00:18<00:17, 68.18it/s]
+ 51% 1287/2500 [00:18<00:17, 68.45it/s]
+ 52% 1294/2500 [00:18<00:17, 68.25it/s]
+ 52% 1301/2500 [00:18<00:17, 68.21it/s]
+ 52% 1308/2500 [00:19<00:17, 68.66it/s]
+ 53% 1315/2500 [00:19<00:17, 68.04it/s]
+ 53% 1322/2500 [00:19<00:17, 68.33it/s]
+ 53% 1329/2500 [00:19<00:17, 68.55it/s]
+ 53% 1336/2500 [00:19<00:17, 68.38it/s]
+ 54% 1343/2500 [00:19<00:16, 68.59it/s]
+ 54% 1350/2500 [00:19<00:16, 68.63it/s]
+ 54% 1357/2500 [00:19<00:16, 68.36it/s]
+ 55% 1364/2500 [00:19<00:16, 68.65it/s]
+ 55% 1371/2500 [00:19<00:16, 68.39it/s]
+ 55% 1378/2500 [00:20<00:16, 67.90it/s]
+ 55% 1385/2500 [00:20<00:16, 67.59it/s]
+ 56% 1392/2500 [00:20<00:16, 68.28it/s]
+ 56% 1399/2500 [00:20<00:16, 68.09it/s]
+ 56% 1406/2500 [00:20<00:16, 68.08it/s]
+ 57% 1413/2500 [00:20<00:15, 68.12it/s]
+ 57% 1420/2500 [00:20<00:15, 68.02it/s]
+ 57% 1427/2500 [00:20<00:15, 67.79it/s]
+ 57% 1434/2500 [00:20<00:15, 67.88it/s]
+ 58% 1441/2500 [00:20<00:15, 67.77it/s]
+ 58% 1448/2500 [00:21<00:15, 68.13it/s]
+ 58% 1455/2500 [00:21<00:15, 67.90it/s]
+ 58% 1462/2500 [00:21<00:15, 67.26it/s]
+ 59% 1469/2500 [00:21<00:15, 67.76it/s]
+ 59% 1476/2500 [00:21<00:15, 68.20it/s]
+ 59% 1483/2500 [00:21<00:14, 68.08it/s]
+ 60% 1490/2500 [00:21<00:14, 68.14it/s]
+ 60% 1497/2500 [00:21<00:14, 67.84it/s]
+ 60% 1504/2500 [00:21<00:14, 67.88it/s]
+ 60% 1511/2500 [00:22<00:14, 68.12it/s]
+ 61% 1518/2500 [00:22<00:14, 68.01it/s]
+ 61% 1525/2500 [00:22<00:14, 67.92it/s]
+ 61% 1532/2500 [00:22<00:14, 68.39it/s]
+ 62% 1539/2500 [00:22<00:14, 67.71it/s]
+ 62% 1546/2500 [00:22<00:14, 68.03it/s]
+ 62% 1553/2500 [00:22<00:13, 68.29it/s]
+ 62% 1560/2500 [00:22<00:13, 68.35it/s]
+ 63% 1567/2500 [00:22<00:13, 68.29it/s]
+ 63% 1574/2500 [00:22<00:13, 68.22it/s]
+ 63% 1581/2500 [00:23<00:13, 68.07it/s]
+ 64% 1588/2500 [00:23<00:13, 67.83it/s]
+ 64% 1595/2500 [00:23<00:13, 67.34it/s]
+ 64% 1602/2500 [00:23<00:13, 67.24it/s]
+ 64% 1609/2500 [00:23<00:13, 67.44it/s]
+ 65% 1616/2500 [00:23<00:13, 67.95it/s]
+ 65% 1623/2500 [00:23<00:12, 67.79it/s]
+ 65% 1630/2500 [00:23<00:12, 67.85it/s]
+ 65% 1637/2500 [00:23<00:12, 67.95it/s]
+ 66% 1644/2500 [00:23<00:12, 67.89it/s]
+ 66% 1651/2500 [00:24<00:12, 68.11it/s]
+ 66% 1658/2500 [00:24<00:12, 68.01it/s]
+ 67% 1665/2500 [00:24<00:12, 67.43it/s]
+ 67% 1672/2500 [00:24<00:12, 67.95it/s]
+ 67% 1679/2500 [00:24<00:12, 68.05it/s]
+ 67% 1686/2500 [00:24<00:12, 67.41it/s]
+ 68% 1693/2500 [00:24<00:11, 67.65it/s]
+ 68% 1700/2500 [00:24<00:11, 68.22it/s]
+ 68% 1707/2500 [00:24<00:11, 67.83it/s]
+ 69% 1714/2500 [00:25<00:11, 68.03it/s]
+ 69% 1721/2500 [00:25<00:11, 68.27it/s]
+ 69% 1728/2500 [00:25<00:11, 67.80it/s]
+ 69% 1735/2500 [00:25<00:11, 68.04it/s]
+ 70% 1742/2500 [00:25<00:11, 68.12it/s]
+ 70% 1749/2500 [00:25<00:11, 67.90it/s]
+ 70% 1756/2500 [00:25<00:10, 68.29it/s]
+ 71% 1763/2500 [00:25<00:10, 68.32it/s]
+ 71% 1770/2500 [00:25<00:10, 68.05it/s]
+ 71% 1777/2500 [00:25<00:10, 68.13it/s]
+ 71% 1784/2500 [00:26<00:10, 68.57it/s]
+ 72% 1791/2500 [00:26<00:10, 68.44it/s]
+ 72% 1798/2500 [00:26<00:10, 67.85it/s]
+ 72% 1805/2500 [00:26<00:10, 68.19it/s]
+ 72% 1812/2500 [00:26<00:10, 68.63it/s]
+ 73% 1819/2500 [00:26<00:09, 68.37it/s]
+ 73% 1826/2500 [00:26<00:09, 68.53it/s]
+ 73% 1833/2500 [00:26<00:09, 67.95it/s]
+ 74% 1840/2500 [00:26<00:09, 68.36it/s]
+ 74% 1847/2500 [00:26<00:09, 68.36it/s]
+ 74% 1854/2500 [00:27<00:09, 67.95it/s]
+ 74% 1861/2500 [00:27<00:09, 68.02it/s]
+ 75% 1868/2500 [00:27<00:09, 67.72it/s]
+ 75% 1875/2500 [00:27<00:09, 67.50it/s]
+ 75% 1882/2500 [00:27<00:09, 67.63it/s]
+ 76% 1889/2500 [00:27<00:09, 67.77it/s]
+ 76% 1896/2500 [00:27<00:08, 67.85it/s]
+ 76% 1903/2500 [00:27<00:08, 67.68it/s]
+ 76% 1910/2500 [00:27<00:08, 67.78it/s]
+ 77% 1917/2500 [00:27<00:08, 67.57it/s]
+ 77% 1924/2500 [00:28<00:08, 68.20it/s]
+ 77% 1931/2500 [00:28<00:08, 68.18it/s]
+ 78% 1938/2500 [00:28<00:08, 67.75it/s]
+ 78% 1945/2500 [00:28<00:08, 67.81it/s]
+ 78% 1952/2500 [00:28<00:08, 68.32it/s]
+ 78% 1959/2500 [00:28<00:07, 67.69it/s]
+ 79% 1966/2500 [00:28<00:07, 67.89it/s]
+ 79% 1973/2500 [00:28<00:07, 67.77it/s]
+ 79% 1980/2500 [00:28<00:07, 67.69it/s]
+ 79% 1987/2500 [00:29<00:07, 67.67it/s]
+ 80% 1994/2500 [00:29<00:07, 67.99it/s]
+ 80% 2001/2500 [00:29<00:07, 67.82it/s]
+ 80% 2008/2500 [00:29<00:07, 67.93it/s]
+ 81% 2015/2500 [00:29<00:07, 67.74it/s]
+ 81% 2022/2500 [00:29<00:07, 67.67it/s]
+ 81% 2029/2500 [00:29<00:06, 67.95it/s]
+ 81% 2036/2500 [00:29<00:06, 68.26it/s]
+ 82% 2043/2500 [00:29<00:06, 67.62it/s]
+ 82% 2050/2500 [00:29<00:06, 67.59it/s]
+ 82% 2057/2500 [00:30<00:06, 67.69it/s]
+ 83% 2064/2500 [00:30<00:06, 67.82it/s]
+ 83% 2071/2500 [00:30<00:06, 67.84it/s]
+ 83% 2078/2500 [00:30<00:06, 67.27it/s]
+ 83% 2085/2500 [00:30<00:06, 67.51it/s]
+ 84% 2092/2500 [00:30<00:05, 68.02it/s]
+ 84% 2099/2500 [00:30<00:05, 67.40it/s]
+ 84% 2106/2500 [00:30<00:05, 67.39it/s]
+ 85% 2113/2500 [00:30<00:05, 67.53it/s]
+ 85% 2120/2500 [00:30<00:05, 67.18it/s]
+ 85% 2127/2500 [00:31<00:05, 67.49it/s]
+ 85% 2134/2500 [00:31<00:05, 67.55it/s]
+ 86% 2141/2500 [00:31<00:05, 67.30it/s]
+ 86% 2148/2500 [00:31<00:05, 67.44it/s]
+ 86% 2155/2500 [00:31<00:05, 67.69it/s]
+ 86% 2162/2500 [00:31<00:05, 67.45it/s]
+ 87% 2169/2500 [00:31<00:04, 67.56it/s]
+ 87% 2176/2500 [00:31<00:04, 68.05it/s]
+ 87% 2183/2500 [00:31<00:04, 66.21it/s]
+ 88% 2190/2500 [00:32<00:04, 66.56it/s]
+ 88% 2197/2500 [00:32<00:04, 66.71it/s]
+ 88% 2204/2500 [00:32<00:04, 66.96it/s]
+ 88% 2211/2500 [00:32<00:04, 66.95it/s]
+ 89% 2218/2500 [00:32<00:04, 67.34it/s]
+ 89% 2225/2500 [00:32<00:04, 67.22it/s]
+ 89% 2232/2500 [00:32<00:03, 67.68it/s]
+ 90% 2239/2500 [00:32<00:03, 67.77it/s]
+ 90% 2246/2500 [00:32<00:03, 67.42it/s]
+ 90% 2253/2500 [00:32<00:03, 67.44it/s]
+ 90% 2260/2500 [00:33<00:03, 67.74it/s]
+ 91% 2267/2500 [00:33<00:03, 67.50it/s]
+ 91% 2274/2500 [00:33<00:03, 67.58it/s]
+ 91% 2281/2500 [00:33<00:03, 67.11it/s]
+ 92% 2288/2500 [00:33<00:03, 67.62it/s]
+ 92% 2295/2500 [00:33<00:03, 67.65it/s]
+ 92% 2302/2500 [00:33<00:02, 66.29it/s]
+ 92% 2309/2500 [00:33<00:02, 66.77it/s]
+ 93% 2316/2500 [00:33<00:02, 67.17it/s]
+ 93% 2323/2500 [00:34<00:02, 66.57it/s]
+ 93% 2330/2500 [00:34<00:02, 66.57it/s]
+ 93% 2337/2500 [00:34<00:02, 66.79it/s]
+ 94% 2344/2500 [00:34<00:02, 67.34it/s]
+ 94% 2351/2500 [00:34<00:02, 66.77it/s]
+ 94% 2358/2500 [00:34<00:02, 67.11it/s]
+ 95% 2365/2500 [00:34<00:02, 66.75it/s]
+ 95% 2372/2500 [00:34<00:01, 67.48it/s]
+ 95% 2379/2500 [00:34<00:01, 67.74it/s]
+ 95% 2386/2500 [00:34<00:01, 67.33it/s]
+ 96% 2393/2500 [00:35<00:01, 67.21it/s]
+ 96% 2400/2500 [00:35<00:01, 67.73it/s]
+ 96% 2407/2500 [00:35<00:01, 67.23it/s]
+ 97% 2414/2500 [00:35<00:01, 67.27it/s]
+ 97% 2421/2500 [00:35<00:01, 66.88it/s]
+ 97% 2428/2500 [00:35<00:01, 67.23it/s]
+ 97% 2435/2500 [00:35<00:00, 67.38it/s]
+ 98% 2442/2500 [00:35<00:00, 67.27it/s]
+ 98% 2449/2500 [00:35<00:00, 66.92it/s]
+ 98% 2456/2500 [00:35<00:00, 67.53it/s]
+ 99% 2463/2500 [00:36<00:00, 67.33it/s]
+ 99% 2470/2500 [00:36<00:00, 67.23it/s]
+ 99% 2477/2500 [00:36<00:00, 67.46it/s]
+ 99% 2484/2500 [00:36<00:00, 67.67it/s]
+100% 2491/2500 [00:36<00:00, 66.85it/s]
+                                        
+{'eval_loss': 0.07209249585866928, 'eval_macro-f1': 0.2310911829815229, 'eval_micro-f1': 0.6361272912758746, 'eval_runtime': 36.7595, 'eval_samples_per_second': 136.019, 'eval_steps_per_second': 68.01, 'epoch': 1.0}
+ 50% 6875/13750 [19:26<18:42,  6.13it/s]
+100% 2500/2500 [00:36<00:00, 67.07it/s]
+                                       [INFO|trainer.py:2640] 2022-09-12 19:18:51,901 >> Saving model checkpoint to logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-6875
+[INFO|configuration_utils.py:451] 2022-09-12 19:18:51,902 >> Configuration saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-6875/config.json
+[INFO|modeling_utils.py:1566] 2022-09-12 19:18:52,248 >> Model weights saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-6875/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2145] 2022-09-12 19:18:52,248 >> tokenizer config file saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-6875/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2152] 2022-09-12 19:18:52,249 >> Special tokens file saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-6875/special_tokens_map.json
+{'loss': 0.0592, 'learning_rate': 1.4727272727272728e-05, 'epoch': 1.02}
+{'loss': 0.0581, 'learning_rate': 1.3636363636363637e-05, 'epoch': 1.09}
+{'loss': 0.0566, 'learning_rate': 1.2545454545454545e-05, 'epoch': 1.16}
+{'loss': 0.057, 'learning_rate': 1.1454545454545455e-05, 'epoch': 1.24}
+{'loss': 0.0562, 'learning_rate': 1.0363636363636364e-05, 'epoch': 1.31}
+{'loss': 0.0558, 'learning_rate': 9.272727272727273e-06, 'epoch': 1.38}
+{'loss': 0.0557, 'learning_rate': 8.181818181818181e-06, 'epoch': 1.45}
+{'loss': 0.0542, 'learning_rate': 7.090909090909091e-06, 'epoch': 1.53}
+{'loss': 0.0544, 'learning_rate': 6e-06, 'epoch': 1.6}
+{'loss': 0.0542, 'learning_rate': 4.90909090909091e-06, 'epoch': 1.67}
+{'loss': 0.0538, 'learning_rate': 3.818181818181818e-06, 'epoch': 1.75}
+{'loss': 0.0528, 'learning_rate': 2.7272727272727272e-06, 'epoch': 1.82}
+{'loss': 0.0532, 'learning_rate': 1.6363636363636363e-06, 'epoch': 1.89}
+{'loss': 0.0527, 'learning_rate': 5.454545454545455e-07, 'epoch': 1.96}
+100% 13750/13750 [38:15<00:00,  6.11it/s][INFO|trainer.py:723] 2022-09-12 19:37:40,717 >> The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: text. If text are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:2891] 2022-09-12 19:37:40,719 >> ***** Running Evaluation *****
+[INFO|trainer.py:2893] 2022-09-12 19:37:40,719 >>   Num examples = 5000
+[INFO|trainer.py:2896] 2022-09-12 19:37:40,719 >>   Batch size = 2
+
+  0% 0/2500 [00:00<?, ?it/s]
+  0% 8/2500 [00:00<00:31, 78.75it/s]
+  1% 16/2500 [00:00<00:33, 73.06it/s]
+  1% 24/2500 [00:00<00:34, 71.58it/s]
+  1% 32/2500 [00:00<00:35, 69.08it/s]
+  2% 39/2500 [00:00<00:35, 68.66it/s]
+  2% 46/2500 [00:00<00:35, 68.98it/s]
+  2% 53/2500 [00:00<00:35, 68.75it/s]
+  2% 61/2500 [00:00<00:35, 69.36it/s]
+  3% 69/2500 [00:00<00:34, 69.67it/s]
+  3% 76/2500 [00:01<00:34, 69.67it/s]
+  3% 84/2500 [00:01<00:34, 69.82it/s]
+  4% 91/2500 [00:01<00:34, 69.54it/s]
+  4% 98/2500 [00:01<00:34, 69.35it/s]
+  4% 106/2500 [00:01<00:34, 69.76it/s]
+  5% 113/2500 [00:01<00:34, 69.03it/s]
+  5% 120/2500 [00:01<00:34, 69.30it/s]
+  5% 128/2500 [00:01<00:33, 69.79it/s]
+  5% 135/2500 [00:01<00:33, 69.59it/s]
+  6% 143/2500 [00:02<00:33, 69.87it/s]
+  6% 150/2500 [00:02<00:33, 69.66it/s]
+  6% 157/2500 [00:02<00:33, 69.41it/s]
+  7% 165/2500 [00:02<00:33, 69.66it/s]
+  7% 173/2500 [00:02<00:33, 69.86it/s]
+  7% 180/2500 [00:02<00:33, 69.14it/s]
+  7% 187/2500 [00:02<00:33, 68.86it/s]
+  8% 194/2500 [00:02<00:33, 69.11it/s]
+  8% 201/2500 [00:02<00:33, 68.82it/s]
+  8% 209/2500 [00:03<00:33, 69.24it/s]
+  9% 216/2500 [00:03<00:32, 69.41it/s]
+  9% 223/2500 [00:03<00:32, 69.15it/s]
+  9% 230/2500 [00:03<00:32, 69.34it/s]
+  9% 237/2500 [00:03<00:32, 69.26it/s]
+ 10% 244/2500 [00:03<00:32, 69.10it/s]
+ 10% 251/2500 [00:03<00:32, 69.18it/s]
+ 10% 258/2500 [00:03<00:32, 68.93it/s]
+ 11% 265/2500 [00:03<00:32, 68.81it/s]
+ 11% 273/2500 [00:03<00:32, 69.17it/s]
+ 11% 280/2500 [00:04<00:31, 69.40it/s]
+ 11% 287/2500 [00:04<00:31, 69.42it/s]
+ 12% 294/2500 [00:04<00:31, 69.27it/s]
+ 12% 301/2500 [00:04<00:31, 69.41it/s]
+ 12% 308/2500 [00:04<00:31, 69.17it/s]
+ 13% 316/2500 [00:04<00:31, 69.49it/s]
+ 13% 323/2500 [00:04<00:31, 69.29it/s]
+ 13% 330/2500 [00:04<00:31, 68.64it/s]
+ 13% 337/2500 [00:04<00:31, 68.93it/s]
+ 14% 345/2500 [00:04<00:31, 69.17it/s]
+ 14% 352/2500 [00:05<00:31, 69.21it/s]
+ 14% 359/2500 [00:05<00:30, 69.37it/s]
+ 15% 366/2500 [00:05<00:30, 69.03it/s]
+ 15% 373/2500 [00:05<00:30, 68.78it/s]
+ 15% 381/2500 [00:05<00:30, 69.20it/s]
+ 16% 388/2500 [00:05<00:30, 69.36it/s]
+ 16% 395/2500 [00:05<00:30, 68.27it/s]
+ 16% 402/2500 [00:05<00:30, 68.71it/s]
+ 16% 409/2500 [00:05<00:30, 69.02it/s]
+ 17% 416/2500 [00:06<00:30, 68.85it/s]
+ 17% 423/2500 [00:06<00:30, 69.16it/s]
+ 17% 431/2500 [00:06<00:29, 69.55it/s]
+ 18% 438/2500 [00:06<00:29, 69.15it/s]
+ 18% 445/2500 [00:06<00:29, 69.00it/s]
+ 18% 453/2500 [00:06<00:29, 69.22it/s]
+ 18% 460/2500 [00:06<00:29, 68.88it/s]
+ 19% 467/2500 [00:06<00:29, 68.78it/s]
+ 19% 474/2500 [00:06<00:29, 69.01it/s]
+ 19% 481/2500 [00:06<00:29, 69.00it/s]
+ 20% 488/2500 [00:07<00:29, 69.19it/s]
+ 20% 495/2500 [00:07<00:28, 69.25it/s]
+ 20% 502/2500 [00:07<00:29, 68.66it/s]
+ 20% 509/2500 [00:07<00:28, 68.66it/s]
+ 21% 516/2500 [00:07<00:29, 68.20it/s]
+ 21% 523/2500 [00:07<00:29, 68.05it/s]
+ 21% 530/2500 [00:07<00:28, 68.35it/s]
+ 21% 537/2500 [00:07<00:29, 67.51it/s]
+ 22% 544/2500 [00:07<00:28, 68.11it/s]
+ 22% 551/2500 [00:07<00:28, 68.42it/s]
+ 22% 558/2500 [00:08<00:28, 68.09it/s]
+ 23% 565/2500 [00:08<00:28, 68.16it/s]
+ 23% 572/2500 [00:08<00:28, 68.40it/s]
+ 23% 579/2500 [00:08<00:28, 67.85it/s]
+ 23% 586/2500 [00:08<00:27, 68.39it/s]
+ 24% 593/2500 [00:08<00:27, 68.56it/s]
+ 24% 600/2500 [00:08<00:27, 68.45it/s]
+ 24% 607/2500 [00:08<00:27, 68.32it/s]
+ 25% 614/2500 [00:08<00:27, 68.69it/s]
+ 25% 621/2500 [00:08<00:27, 68.07it/s]
+ 25% 628/2500 [00:09<00:27, 68.58it/s]
+ 25% 635/2500 [00:09<00:27, 68.88it/s]
+ 26% 642/2500 [00:09<00:27, 68.46it/s]
+ 26% 649/2500 [00:09<00:26, 68.65it/s]
+ 26% 656/2500 [00:09<00:26, 69.00it/s]
+ 27% 663/2500 [00:09<00:26, 68.60it/s]
+ 27% 670/2500 [00:09<00:26, 68.70it/s]
+ 27% 677/2500 [00:09<00:26, 68.56it/s]
+ 27% 684/2500 [00:09<00:26, 68.54it/s]
+ 28% 691/2500 [00:10<00:26, 68.79it/s]
+ 28% 698/2500 [00:10<00:26, 68.96it/s]
+ 28% 705/2500 [00:10<00:26, 68.40it/s]
+ 28% 712/2500 [00:10<00:25, 68.82it/s]
+ 29% 719/2500 [00:10<00:25, 69.03it/s]
+ 29% 726/2500 [00:10<00:25, 68.70it/s]
+ 29% 733/2500 [00:10<00:25, 68.87it/s]
+ 30% 740/2500 [00:10<00:25, 68.78it/s]
+ 30% 747/2500 [00:10<00:26, 66.96it/s]
+ 30% 754/2500 [00:10<00:25, 67.74it/s]
+ 30% 761/2500 [00:11<00:25, 68.16it/s]
+ 31% 768/2500 [00:11<00:25, 68.44it/s]
+ 31% 775/2500 [00:11<00:25, 68.78it/s]
+ 31% 782/2500 [00:11<00:25, 68.63it/s]
+ 32% 789/2500 [00:11<00:25, 68.25it/s]
+ 32% 796/2500 [00:11<00:24, 68.38it/s]
+ 32% 803/2500 [00:11<00:24, 68.63it/s]
+ 32% 810/2500 [00:11<00:24, 67.89it/s]
+ 33% 817/2500 [00:11<00:24, 68.05it/s]
+ 33% 824/2500 [00:11<00:24, 68.61it/s]
+ 33% 831/2500 [00:12<00:24, 68.51it/s]
+ 34% 838/2500 [00:12<00:24, 68.31it/s]
+ 34% 845/2500 [00:12<00:24, 68.31it/s]
+ 34% 852/2500 [00:12<00:24, 68.23it/s]
+ 34% 859/2500 [00:12<00:23, 68.60it/s]
+ 35% 866/2500 [00:12<00:23, 68.62it/s]
+ 35% 873/2500 [00:12<00:23, 68.63it/s]
+ 35% 880/2500 [00:12<00:23, 68.79it/s]
+ 35% 887/2500 [00:12<00:23, 68.57it/s]
+ 36% 894/2500 [00:12<00:23, 68.36it/s]
+ 36% 901/2500 [00:13<00:23, 68.64it/s]
+ 36% 908/2500 [00:13<00:23, 68.58it/s]
+ 37% 915/2500 [00:13<00:23, 68.46it/s]
+ 37% 922/2500 [00:13<00:23, 68.53it/s]
+ 37% 929/2500 [00:13<00:23, 67.53it/s]
+ 37% 936/2500 [00:13<00:22, 68.15it/s]
+ 38% 943/2500 [00:13<00:22, 68.34it/s]
+ 38% 950/2500 [00:13<00:23, 66.85it/s]
+ 38% 957/2500 [00:13<00:22, 67.58it/s]
+ 39% 964/2500 [00:14<00:22, 68.04it/s]
+ 39% 971/2500 [00:14<00:22, 68.09it/s]
+ 39% 978/2500 [00:14<00:22, 68.32it/s]
+ 39% 985/2500 [00:14<00:22, 68.32it/s]
+ 40% 992/2500 [00:14<00:22, 68.22it/s]
+ 40% 999/2500 [00:14<00:21, 68.39it/s]
+ 40% 1006/2500 [00:14<00:21, 68.51it/s]
+ 41% 1013/2500 [00:14<00:21, 68.50it/s]
+ 41% 1020/2500 [00:14<00:21, 68.52it/s]
+ 41% 1027/2500 [00:14<00:21, 68.86it/s]
+ 41% 1034/2500 [00:15<00:21, 68.71it/s]
+ 42% 1041/2500 [00:15<00:21, 68.92it/s]
+ 42% 1048/2500 [00:15<00:21, 68.92it/s]
+ 42% 1055/2500 [00:15<00:21, 68.40it/s]
+ 42% 1062/2500 [00:15<00:21, 68.13it/s]
+ 43% 1069/2500 [00:15<00:20, 68.20it/s]
+ 43% 1076/2500 [00:15<00:20, 67.98it/s]
+ 43% 1083/2500 [00:15<00:20, 68.22it/s]
+ 44% 1090/2500 [00:15<00:20, 67.77it/s]
+ 44% 1097/2500 [00:15<00:20, 67.44it/s]
+ 44% 1105/2500 [00:16<00:20, 68.18it/s]
+ 44% 1112/2500 [00:16<00:20, 68.46it/s]
+ 45% 1119/2500 [00:16<00:20, 68.24it/s]
+ 45% 1126/2500 [00:16<00:20, 68.31it/s]
+ 45% 1133/2500 [00:16<00:20, 68.30it/s]
+ 46% 1140/2500 [00:16<00:20, 67.79it/s]
+ 46% 1147/2500 [00:16<00:19, 68.16it/s]
+ 46% 1154/2500 [00:16<00:19, 68.15it/s]
+ 46% 1161/2500 [00:16<00:19, 67.82it/s]
+ 47% 1168/2500 [00:16<00:19, 68.08it/s]
+ 47% 1175/2500 [00:17<00:19, 68.17it/s]
+ 47% 1182/2500 [00:17<00:19, 67.79it/s]
+ 48% 1189/2500 [00:17<00:19, 67.74it/s]
+ 48% 1196/2500 [00:17<00:19, 68.11it/s]
+ 48% 1203/2500 [00:17<00:19, 67.89it/s]
+ 48% 1210/2500 [00:17<00:19, 67.70it/s]
+ 49% 1217/2500 [00:17<00:18, 67.91it/s]
+ 49% 1224/2500 [00:17<00:18, 67.65it/s]
+ 49% 1231/2500 [00:17<00:18, 67.65it/s]
+ 50% 1238/2500 [00:18<00:18, 67.75it/s]
+ 50% 1245/2500 [00:18<00:18, 67.78it/s]
+ 50% 1252/2500 [00:18<00:18, 68.26it/s]
+ 50% 1259/2500 [00:18<00:18, 68.12it/s]
+ 51% 1266/2500 [00:18<00:18, 67.81it/s]
+ 51% 1273/2500 [00:18<00:18, 67.90it/s]
+ 51% 1280/2500 [00:18<00:17, 68.26it/s]
+ 51% 1287/2500 [00:18<00:17, 68.12it/s]
+ 52% 1294/2500 [00:18<00:17, 68.01it/s]
+ 52% 1301/2500 [00:18<00:17, 67.85it/s]
+ 52% 1308/2500 [00:19<00:17, 67.66it/s]
+ 53% 1315/2500 [00:19<00:17, 68.02it/s]
+ 53% 1322/2500 [00:19<00:17, 68.21it/s]
+ 53% 1329/2500 [00:19<00:17, 67.82it/s]
+ 53% 1336/2500 [00:19<00:17, 68.37it/s]
+ 54% 1343/2500 [00:19<00:16, 68.13it/s]
+ 54% 1350/2500 [00:19<00:17, 67.63it/s]
+ 54% 1357/2500 [00:19<00:16, 67.62it/s]
+ 55% 1364/2500 [00:19<00:16, 67.89it/s]
+ 55% 1371/2500 [00:19<00:16, 67.78it/s]
+ 55% 1378/2500 [00:20<00:16, 67.36it/s]
+ 55% 1385/2500 [00:20<00:16, 67.57it/s]
+ 56% 1392/2500 [00:20<00:16, 68.03it/s]
+ 56% 1399/2500 [00:20<00:16, 67.93it/s]
+ 56% 1406/2500 [00:20<00:16, 68.03it/s]
+ 57% 1413/2500 [00:20<00:15, 68.04it/s]
+ 57% 1420/2500 [00:20<00:15, 67.58it/s]
+ 57% 1427/2500 [00:20<00:15, 67.94it/s]
+ 57% 1434/2500 [00:20<00:15, 67.99it/s]
+ 58% 1441/2500 [00:21<00:15, 67.27it/s]
+ 58% 1448/2500 [00:21<00:15, 67.21it/s]
+ 58% 1455/2500 [00:21<00:15, 67.44it/s]
+ 58% 1462/2500 [00:21<00:15, 67.57it/s]
+ 59% 1469/2500 [00:21<00:15, 67.47it/s]
+ 59% 1476/2500 [00:21<00:15, 67.91it/s]
+ 59% 1483/2500 [00:21<00:15, 67.49it/s]
+ 60% 1490/2500 [00:21<00:14, 67.55it/s]
+ 60% 1497/2500 [00:21<00:14, 67.64it/s]
+ 60% 1504/2500 [00:21<00:14, 66.96it/s]
+ 60% 1511/2500 [00:22<00:14, 67.13it/s]
+ 61% 1518/2500 [00:22<00:14, 67.48it/s]
+ 61% 1525/2500 [00:22<00:14, 67.47it/s]
+ 61% 1532/2500 [00:22<00:14, 67.59it/s]
+ 62% 1539/2500 [00:22<00:14, 67.83it/s]
+ 62% 1546/2500 [00:22<00:14, 67.32it/s]
+ 62% 1553/2500 [00:22<00:13, 67.77it/s]
+ 62% 1560/2500 [00:22<00:13, 68.26it/s]
+ 63% 1567/2500 [00:22<00:13, 68.17it/s]
+ 63% 1574/2500 [00:22<00:13, 67.42it/s]
+ 63% 1581/2500 [00:23<00:13, 67.65it/s]
+ 64% 1588/2500 [00:23<00:13, 67.73it/s]
+ 64% 1595/2500 [00:23<00:13, 67.57it/s]
+ 64% 1602/2500 [00:23<00:13, 67.75it/s]
+ 64% 1609/2500 [00:23<00:13, 67.68it/s]
+ 65% 1616/2500 [00:23<00:12, 68.32it/s]
+ 65% 1623/2500 [00:23<00:12, 68.27it/s]
+ 65% 1630/2500 [00:23<00:12, 67.81it/s]
+ 65% 1637/2500 [00:23<00:12, 68.00it/s]
+ 66% 1644/2500 [00:24<00:12, 68.09it/s]
+ 66% 1651/2500 [00:24<00:12, 67.51it/s]
+ 66% 1658/2500 [00:24<00:12, 67.77it/s]
+ 67% 1665/2500 [00:24<00:12, 67.59it/s]
+ 67% 1672/2500 [00:24<00:12, 68.01it/s]
+ 67% 1679/2500 [00:24<00:12, 68.05it/s]
+ 67% 1686/2500 [00:24<00:11, 67.96it/s]
+ 68% 1693/2500 [00:24<00:11, 67.52it/s]
+ 68% 1700/2500 [00:24<00:11, 68.04it/s]
+ 68% 1707/2500 [00:24<00:11, 68.01it/s]
+ 69% 1714/2500 [00:25<00:11, 67.29it/s]
+ 69% 1721/2500 [00:25<00:11, 67.73it/s]
+ 69% 1728/2500 [00:25<00:11, 68.04it/s]
+ 69% 1735/2500 [00:25<00:11, 67.64it/s]
+ 70% 1742/2500 [00:25<00:11, 67.88it/s]
+ 70% 1749/2500 [00:25<00:11, 67.67it/s]
+ 70% 1756/2500 [00:25<00:10, 67.86it/s]
+ 71% 1763/2500 [00:25<00:10, 68.06it/s]
+ 71% 1770/2500 [00:25<00:10, 67.51it/s]
+ 71% 1777/2500 [00:25<00:10, 67.91it/s]
+ 71% 1784/2500 [00:26<00:10, 68.13it/s]
+ 72% 1791/2500 [00:26<00:10, 67.82it/s]
+ 72% 1798/2500 [00:26<00:10, 67.54it/s]
+ 72% 1805/2500 [00:26<00:10, 67.84it/s]
+ 72% 1812/2500 [00:26<00:10, 67.95it/s]
+ 73% 1819/2500 [00:26<00:10, 67.98it/s]
+ 73% 1826/2500 [00:26<00:09, 68.09it/s]
+ 73% 1833/2500 [00:26<00:09, 67.30it/s]
+ 74% 1840/2500 [00:26<00:09, 67.94it/s]
+ 74% 1847/2500 [00:27<00:09, 68.17it/s]
+ 74% 1854/2500 [00:27<00:09, 67.15it/s]
+ 74% 1861/2500 [00:27<00:09, 67.51it/s]
+ 75% 1868/2500 [00:27<00:09, 67.87it/s]
+ 75% 1875/2500 [00:27<00:09, 67.17it/s]
+ 75% 1882/2500 [00:27<00:09, 67.27it/s]
+ 76% 1889/2500 [00:27<00:09, 67.45it/s]
+ 76% 1896/2500 [00:27<00:08, 67.47it/s]
+ 76% 1903/2500 [00:27<00:08, 67.70it/s]
+ 76% 1910/2500 [00:27<00:08, 67.86it/s]
+ 77% 1917/2500 [00:28<00:08, 67.50it/s]
+ 77% 1924/2500 [00:28<00:08, 67.79it/s]
+ 77% 1931/2500 [00:28<00:08, 67.80it/s]
+ 78% 1938/2500 [00:28<00:08, 67.14it/s]
+ 78% 1945/2500 [00:28<00:08, 67.42it/s]
+ 78% 1952/2500 [00:28<00:08, 68.06it/s]
+ 78% 1959/2500 [00:28<00:08, 67.46it/s]
+ 79% 1966/2500 [00:28<00:07, 67.59it/s]
+ 79% 1973/2500 [00:28<00:07, 67.42it/s]
+ 79% 1980/2500 [00:28<00:07, 67.91it/s]
+ 79% 1987/2500 [00:29<00:07, 67.68it/s]
+ 80% 1994/2500 [00:29<00:07, 67.49it/s]
+ 80% 2001/2500 [00:29<00:07, 67.73it/s]
+ 80% 2008/2500 [00:29<00:07, 68.29it/s]
+ 81% 2015/2500 [00:29<00:07, 67.75it/s]
+ 81% 2022/2500 [00:29<00:07, 67.65it/s]
+ 81% 2029/2500 [00:29<00:06, 67.92it/s]
+ 81% 2036/2500 [00:29<00:06, 67.80it/s]
+ 82% 2043/2500 [00:29<00:06, 67.76it/s]
+ 82% 2050/2500 [00:30<00:06, 67.72it/s]
+ 82% 2057/2500 [00:30<00:06, 66.11it/s]
+ 83% 2064/2500 [00:30<00:06, 66.96it/s]
+ 83% 2071/2500 [00:30<00:06, 67.20it/s]
+ 83% 2078/2500 [00:30<00:06, 67.25it/s]
+ 83% 2085/2500 [00:30<00:06, 67.17it/s]
+ 84% 2092/2500 [00:30<00:06, 67.67it/s]
+ 84% 2099/2500 [00:30<00:05, 67.22it/s]
+ 84% 2106/2500 [00:30<00:05, 67.27it/s]
+ 85% 2113/2500 [00:30<00:05, 67.45it/s]
+ 85% 2120/2500 [00:31<00:05, 67.57it/s]
+ 85% 2127/2500 [00:31<00:05, 67.05it/s]
+ 85% 2134/2500 [00:31<00:05, 67.36it/s]
+ 86% 2141/2500 [00:31<00:05, 67.14it/s]
+ 86% 2148/2500 [00:31<00:05, 67.61it/s]
+ 86% 2155/2500 [00:31<00:05, 67.68it/s]
+ 86% 2162/2500 [00:31<00:05, 67.39it/s]
+ 87% 2169/2500 [00:31<00:04, 67.02it/s]
+ 87% 2176/2500 [00:31<00:04, 67.64it/s]
+ 87% 2183/2500 [00:31<00:04, 67.37it/s]
+ 88% 2190/2500 [00:32<00:04, 67.61it/s]
+ 88% 2197/2500 [00:32<00:04, 67.30it/s]
+ 88% 2204/2500 [00:32<00:04, 67.41it/s]
+ 88% 2211/2500 [00:32<00:04, 67.51it/s]
+ 89% 2218/2500 [00:32<00:04, 67.67it/s]
+ 89% 2225/2500 [00:32<00:04, 67.04it/s]
+ 89% 2232/2500 [00:32<00:03, 67.65it/s]
+ 90% 2239/2500 [00:32<00:03, 67.61it/s]
+ 90% 2246/2500 [00:32<00:03, 67.10it/s]
+ 90% 2253/2500 [00:33<00:03, 67.41it/s]
+ 90% 2260/2500 [00:33<00:03, 67.80it/s]
+ 91% 2267/2500 [00:33<00:03, 66.60it/s]
+ 91% 2274/2500 [00:33<00:03, 66.90it/s]
+ 91% 2281/2500 [00:33<00:03, 67.24it/s]
+ 92% 2288/2500 [00:33<00:03, 67.38it/s]
+ 92% 2295/2500 [00:33<00:03, 67.38it/s]
+ 92% 2302/2500 [00:33<00:02, 67.42it/s]
+ 92% 2309/2500 [00:33<00:02, 67.08it/s]
+ 93% 2316/2500 [00:33<00:02, 67.75it/s]
+ 93% 2323/2500 [00:34<00:02, 67.74it/s]
+ 93% 2330/2500 [00:34<00:02, 66.99it/s]
+ 93% 2337/2500 [00:34<00:02, 67.20it/s]
+ 94% 2344/2500 [00:34<00:02, 67.55it/s]
+ 94% 2351/2500 [00:34<00:02, 67.17it/s]
+ 94% 2358/2500 [00:34<00:02, 67.21it/s]
+ 95% 2365/2500 [00:34<00:02, 67.50it/s]
+ 95% 2372/2500 [00:34<00:01, 67.92it/s]
+ 95% 2379/2500 [00:34<00:01, 67.44it/s]
+ 95% 2386/2500 [00:35<00:01, 67.28it/s]
+ 96% 2393/2500 [00:35<00:01, 66.95it/s]
+ 96% 2400/2500 [00:35<00:01, 67.14it/s]
+ 96% 2407/2500 [00:35<00:01, 67.20it/s]
+ 97% 2414/2500 [00:35<00:01, 66.38it/s]
+ 97% 2421/2500 [00:35<00:01, 66.82it/s]
+ 97% 2428/2500 [00:35<00:01, 67.40it/s]
+ 97% 2435/2500 [00:35<00:00, 66.80it/s]
+ 98% 2442/2500 [00:35<00:00, 67.16it/s]
+ 98% 2449/2500 [00:35<00:00, 67.25it/s]
+ 98% 2456/2500 [00:36<00:00, 67.62it/s]
+ 99% 2463/2500 [00:36<00:00, 67.33it/s]
+ 99% 2470/2500 [00:36<00:00, 66.75it/s]
+ 99% 2477/2500 [00:36<00:00, 66.64it/s]
+ 99% 2484/2500 [00:36<00:00, 67.17it/s]
+100% 2491/2500 [00:36<00:00, 67.23it/s]
+                                         
+{'eval_loss': 0.06590693444013596, 'eval_macro-f1': 0.2728971639491489, 'eval_micro-f1': 0.6676864244741874, 'eval_runtime': 36.8125, 'eval_samples_per_second': 135.824, 'eval_steps_per_second': 67.912, 'epoch': 2.0}
+100% 13750/13750 [38:52<00:00,  6.11it/s]
+100% 2500/2500 [00:36<00:00, 66.84it/s]
+                                       [INFO|trainer.py:2640] 2022-09-12 19:38:17,534 >> Saving model checkpoint to logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-13750
+[INFO|configuration_utils.py:451] 2022-09-12 19:38:17,535 >> Configuration saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-13750/config.json
+[INFO|modeling_utils.py:1566] 2022-09-12 19:38:17,829 >> Model weights saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-13750/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2145] 2022-09-12 19:38:17,829 >> tokenizer config file saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-13750/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2152] 2022-09-12 19:38:17,829 >> Special tokens file saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-13750/special_tokens_map.json
+[INFO|trainer.py:1850] 2022-09-12 19:38:18,652 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+[INFO|trainer.py:1942] 2022-09-12 19:38:18,653 >> Loading best model from logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/checkpoint-13750 (score: 0.6676864244741874).
+{'train_runtime': 2333.6783, 'train_samples_per_second': 47.136, 'train_steps_per_second': 5.892, 'train_loss': 0.0719417424288663, 'epoch': 2.0}
+100% 13750/13750 [38:53<00:00,  5.89it/s]
+[INFO|trainer.py:2640] 2022-09-12 19:38:18,776 >> Saving model checkpoint to logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1
+[INFO|configuration_utils.py:451] 2022-09-12 19:38:18,778 >> Configuration saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/config.json
+[INFO|modeling_utils.py:1566] 2022-09-12 19:38:19,250 >> Model weights saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2145] 2022-09-12 19:38:19,251 >> tokenizer config file saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2152] 2022-09-12 19:38:19,251 >> Special tokens file saved in logs/eurlex/nlpaueb/legal-bert-small-uncased/seed_1/special_tokens_map.json
+***** train metrics *****
+  epoch                    =        2.0
+  train_loss               =     0.0719
+  train_runtime            = 0:38:53.67
+  train_samples            =      55000
+  train_samples_per_second =     47.136
+  train_steps_per_second   =      5.892
+INFO:__main__:*** Evaluate ***
+[INFO|trainer.py:723] 2022-09-12 19:38:19,290 >> The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: text. If text are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:2891] 2022-09-12 19:38:19,292 >> ***** Running Evaluation *****
+[INFO|trainer.py:2893] 2022-09-12 19:38:19,292 >>   Num examples = 5000
+[INFO|trainer.py:2896] 2022-09-12 19:38:19,292 >>   Batch size = 2
+100% 2500/2500 [00:36<00:00, 67.86it/s]
+***** eval metrics *****
+  epoch                   =        2.0
+  eval_loss               =     0.0659
+  eval_macro-f1           =     0.2729
+  eval_micro-f1           =     0.6677
+  eval_runtime            = 0:00:36.85
+  eval_samples            =       5000
+  eval_samples_per_second =    135.662
+  eval_steps_per_second   =     67.831
+INFO:__main__:*** Predict ***
+[INFO|trainer.py:723] 2022-09-12 19:38:56,152 >> The following columns in the test set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: text. If text are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:2891] 2022-09-12 19:38:56,155 >> ***** Running Prediction *****
+[INFO|trainer.py:2893] 2022-09-12 19:38:56,155 >>   Num examples = 5000
+[INFO|trainer.py:2896] 2022-09-12 19:38:56,155 >>   Batch size = 2
+100% 2500/2500 [00:36<00:00, 67.75it/s]
+***** predict metrics *****
+  predict_loss               =     0.0747
+  predict_macro-f1           =     0.2558
+  predict_micro-f1           =     0.5927
+  predict_runtime            = 0:00:36.91
+  predict_samples            =       5000
+  predict_samples_per_second =    135.439
+  predict_steps_per_second   =      67.72
