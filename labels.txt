@@ -1,0 +1,127 @@
+0   100163	political framework
+1   100164	political party
+2   100165	electoral procedure and voting
+3   100166	parliament
+4   100167	parliamentary proceedings
+5   100168	politics and public safety
+6   100169	executive power and public service
+7   100170	international affairs
+8   100171	cooperation policy
+9   100172	international security
+10   100173	defence
+11   100174	EU institutions and European civil service
+12   100175	European Union law
+13   100176	European construction
+14   100177	EU finance
+15   100178	sources and branches of the law
+16   100179	civil law
+17   100180	criminal law
+18   100181	justice
+19   100182	organisation of the legal system
+20   100183	international law
+21   100184	rights and freedoms
+22   100185	economic policy
+23   100186	economic conditions
+24   100187	regions and regional policy
+25   100188	economic structure
+26   100189	national accounts
+27   100190	economic analysis
+28   100191	trade policy
+29   100192	ariff policy
+30   100193	trade
+31   100194	international trade
+32   100195	consumption
+33   100196	marketing
+34   100197	distributive trades
+35   100198	monetary relations
+36   100199	monetary economics
+37   100200	financial institutions and credit
+38   100201	free movement of capital
+39   100202	financing and investment
+40   100203	insurance
+41   100204	public finance and budget policy
+42   100205	budget
+43   100206	taxation
+44   100207	prices
+45   100208	family
+46   100209	migration
+47   100210	demography and population
+48   100211	social framework
+49   100212	social affairs
+50   100213	culture and religion
+51   100214	social protection
+52   100215	health
+53   100216	construction and town planning
+54   100217	education
+55   100218	teaching
+56   100219	organisation of teaching
+57   100220	documentation
+58   100221	communications
+59   100222	information and information processing
+60   100223	information technology and data processing
+61   100224	natural and applied sciences
+62   100225	humanities
+63   100226	business organisation
+64   100227	business classification
+65   100228	legal form of organisations
+66   100229	management
+67   100230	accounting
+68   100231	competition
+69   100232	employment
+70   100233	labour market
+71   100234	organisation of work and working conditions
+72   100235	personnel management and staff remuneration
+73   100236	labour law and labour relations
+74   100237	transport policy
+75   100238	organisation of transport
+76   100239	land transport
+77   100240	maritime and inland waterway transport
+78   100241	air and space transport
+79   100242	environmental policy
+80   100243	natural environment
+81   100244	deterioration of the environment
+82   100245	agricultural policy
+83   100246	agricultural structures and production
+84   100247	farming systems
+85   100248	cultivation of agricultural land
+86   100249	means of agricultural production
+87   100250	agricultural activity
+88   100251	forestry
+89   100252	fisheries
+90   100253	plant product
+91   100254	animal product
+92   100255	processed agricultural produce
+93   100256	beverages and sugar
+94   100257	foodstuff
+95   100258	agri-foodstuffs
+96   100259	food technology
+97   100260	production
+98   100261	technology and technical regulations
+99   100262	research and intellectual property
+100   100263	energy policy
+101   100264	coal and mining industries
+102   100265	oil industry
+103   100266	electrical and nuclear industries
+104   100267	soft energy
+105   100268	industrial structures and policy
+106   100269	chemistry
+107   100270	iron, steel and other metal industries
+108   100271	mechanical engineering
+109   100272	electronics and electrical engineering
+110   100273	building and public works
+111   100274	wood industry
+112   100275	leather and textile industries"
+113   100276	miscellaneous industries
+114   100277	Europe
+115   100278	regions of EU Member States
+116   100279	America
+117   100280	Africa
+118   100281	Asia and Oceania
+119   100282	economic geography
+120   100283	political geography
+121   100284	overseas countries and territories
+122   100285	United Nations
+123   100286	European organisations
+124   100287	extra-European organisations
+125   100288	world organisations
+126   100289	non-governmental organisations
